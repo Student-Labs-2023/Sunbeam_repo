@@ -1,0 +1,60 @@
+.lyambda {
+    position: absolute;
+    margin-top: 660px;
+    padding-left: 260px;
+}
+
+.image {
+    position: absolute;
+    margin-top: 1005px;
+    margin-left: 1400px;
+}
+
+.about_studio {
+    position: absolute;
+
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+.caption {
+    position: absolute;
+
+    margin-left: 40px;
+    margin-top: 905px;
+    font-family: Fira Sans Extra Condensed;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    text-align: left;
+}
+
+/*
+.our_goal {
+    position: absolute;
+    padding-top: 955px;
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.our_goal2 {
+    position: absolute;
+    padding-top: 1005px;
+    margin-left: 30px;
+    font-size: 22.5px;
+}
+
+.our_goal3 {
+    position: absolute;
+    padding-top: 1055px;
+    margin-left: 30px;
+
+    font-size: 21px;
+}
+*/
+
+.we_happy img {
+    position: absolute;
+    top: 1300px;
+    margin-left: 505px;
+}
