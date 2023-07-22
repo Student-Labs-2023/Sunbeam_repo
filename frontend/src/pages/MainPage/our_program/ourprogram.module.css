@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+
+/* Рисунки */
+.ourProgramImage {
+    position: absolute;
+    margin-top: 2300px;
+    padding-left: 750px;
+}
+
+.zavitushka2 {
+    position: absolute;
+    margin-top: 2300px;
+    padding-left: 1600px;
+    width: 385px;
+    height: 715px;
+}
+
+.butterfly {
+    position: absolute;
+    margin-top: 2820px;
+    paddng-left: 100px;
+}
+
+.zavitushka3 {
+    position: absolute;
+    margin-top: 3550px;
+    margin-left: -65px;
+    z-index: 1;
+}
+
+.zavitushka4 {
+    position: absolute;
+    margin-top: 3850px;
+    margin-left: 770px
+}
+
+/* По программе */
+.firstryad {
+    display: flex;
+    margin-top: 2500px;
+    position: absolute;
+    width: 100%;
+}
+
+.circle_frame1,
+.circle_frame2,
+.circle_frame3 {
+    position: absolute;
+    display: inline-block;
+    width: 422px;
+    height: 566px;
+    border-radius: 50px;
+    border: 2px solid #0000001A;
+    margin-left: 40px;
+}
+
+.circle_frame1 {
+    position: absolute ;
+}
+.circle_frame2 {
+    margin-left: 750px;
+}
+.circle_frame3 {
+    margin-left: 1450px;
+}
+.perviyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+
+.vtoroyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+
+.tretiyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+
+.text_caption {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.text_creation {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.schedule {
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+
+    font-family: Roboto;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+
+    margin-top: 20px;
+    margin-left: 135px;
+    cursor: pointer;
+
+    width: 149px;
+    height: 51px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+
+/* При наведении и нажатии*/
+&:hover {
+     background-color: #FFF06D;
+ }
+&:active {
+     background-color: #FFF06D;
+ }
+
+}
+
+.secondryad {
+    display: flex;
+    margin-top: 3150px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.circle_frame4,
+.circle_frame5,
+.circle_frame6 {
+    position: absolute;
+    display: inline-block;
+    width: 422px;
+    height: 566px;
+    border-radius: 50px;
+    border: 2px solid #0000001A;
+    margin-left: 40px;
+}
+
+.circle_frame4 {
+    position: relative ;
+    z-index: 3;
+}
+.circle_frame5 {
+    margin-left: 750px;
+}
+.circle_frame6 {
+    margin-left: 1450px;
+}
+.perviyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+
+.vtoroyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+
+.tretiyrisunok {
+    padding-top: 20px;
+    margin-left: 20px ;
+}
+

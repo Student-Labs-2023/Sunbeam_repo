@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+
+
+.about_studio {
+    padding-left: 30px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.caption {
+    position: absolute;
+    margin-top: 850px;
+}
+
+.our_goal {
+    position: relative;
+    margin-top: 40px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+}
+
+.u_nas {
+    position: relative;
+    margin-top: 40px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+
+}
+
+.v_nashey {
+    position: relative;
+    margin-top: 40px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+}
+
+.risunok {
+    pointer-events: none;
+    position: absolute;
+    padding-left: 1400px;
+    margin-top: 750px;
+    user-select: none;
+
+}
+
+.radi {
+    pointer-events: none;
+    position: absolute;
+    padding-left: 700px;
+    margin-top: 1215px;
+    user-select: none;
+
+}
+
+.mark {
+    pointer-events: none;
+    position: absolute;
+    margin-top: 960px;
+    user-select: none;
+}
+
+.heart1 {
+    pointer-events: none;
+    position: absolute;
+    padding-left: 600px;
+    margin-top: 1250px;
+    user-select: none;
+
+}
+
+.heart2 {
+    pointer-events: none;
+    position: absolute;
+    padding-left: 1000px;
+    margin-top: 1200px;
+    user-select: none;
+}
+
+.zavitushka {
+    pointer-events: none;
+    position: absolute;
+    padding-left: 1450px;
+    margin-top: 1150px;
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+
+.tables {
+    position: absolute;
+    margin-top: 1450px;
+}
+
+.mesta {
+    padding-left: 600px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mesta a {
+    padding-left: 75px;
+}
+
+.frames {
+    position: absolute;
+
+    width: 1306px;
+    display: flex;
+    padding-left: 5px;
+}
+
+.frames img {
+    margin-right: 250px;
+}
+
+.price {
+    margin-top: 300px;
+    padding-left: 600px;
+
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.price a {
+    padding-left: 110px;
+}
+
+.button_price {
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+
+    font-family: Roboto;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+
+    top: 475px;
+    left: 810px;
+
+    width: 249px;
+    height: 51px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    margin-left: 40px;
+
+/* При наведении и нажатии*/
+&:hover {
+     background-color: #FFF06D;
+ }
+&:active {
+     background-color: #FFF06D;
+ }
+
+}
+
+.another_zavitushka {
+    user-select: none;
+    position: absolute;
+    margin-top: -180px;
+}
+
+.flower {
+    user-select: none;
+    position: absolute;
+    padding-top: -40px;
+    margin-left: -600px;
+}
+
+.lyambda {
+    user-select: none;
+    position: absolute;
+    margin-top: 225px;
+    margin-left: -330px;
+}

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/api/post/documentation/1.0.0/post.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/post/documentation/1.0.0/post.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/api/product/documentation/1.0.0/product.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/product/documentation/1.0.0/product.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +13,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/frontend/src/pages/MainPage/main/Main.tsx" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +47,8 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "18.13.0",
     "javascript.nodejs.core.library.typings.version": "18.13.0",
-    "last_opened_file_path": "C:/Users/79237/Desktop/Проекты/projectforeffective",
+    "last_opened_file_path": "C:/Users/79237/Desktop/Проекты/React-With-Smooth-Scrolling",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -62,8 +57,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\79237\\Desktop\\Проекты\\sunbeam_effective\\frontend\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "ts.external.directory.path": "C:\\Users\\79237\\Desktop\\Проекты\\sunbeam_repo\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ScrollToTopButton" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\components" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\public" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\pages\MainPage" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\components\main" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\pages" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\components\header" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -132,11 +127,39 @@
       <workItem from="1689273144467" duration="390000" />
       <workItem from="1689273550246" duration="740000" />
       <workItem from="1689274520323" duration="17050000" />
+      <workItem from="1689342634336" duration="12000" />
+      <workItem from="1689579699980" duration="3287000" />
+      <workItem from="1689586775802" duration="3767000" />
+      <workItem from="1689669513209" duration="20274000" />
+      <workItem from="1689747096401" duration="32536000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
