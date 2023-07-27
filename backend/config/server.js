@@ -3,7 +3,7 @@ module.exports = ({ env }) => ({
   port: env.int('PORT', 1337),
   apiToken: {salt:'d79321fks75675dfs8123'},
   app: {
-    keys: env.array('APP_KEYS'),
+    keys: env.array('APP_KEYS', ['myKeyA', 'myKeyB']),
   },
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
