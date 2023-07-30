@@ -2,142 +2,278 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
 
-/*Лучи*/
-.beam {
-    position: absolute;
-    padding-top: 200px;
-    margin-left: 54px;
-    user-select: none;
-}
+    /*Лучи*/
+    .beam {
+        position: absolute;
+        padding-top: 10%;
+        margin-left: 10%;
+        user-select: none;
+    }
 
-.beam1 {
-    position: absolute;
-    margin-left: 350px;
-    user-select: none;
-}
+    .beam1 {
+        position: absolute;
+        margin-left: 20%;
+        user-select: none;
+    }
 
-.beam2 {
-    position: absolute;
-    margin-left: 350px;
-    top: 580px;
-    user-select: none;
+    .beam2 {
+        position: absolute;
+        margin-left: 20%;
+        padding-top: 25%;
+        user-select: none;
+    }
 
-}
+    .beam3 {
+        position: absolute;
+        top: 8%;
+        margin-left: 40%;
+        user-select: none;
+    }
 
-.beam3 {
-    position: absolute;
-    top: 70px;
-    margin-left: 750px;
-    user-select: none;
-}
+    .beam4 {
+        position: absolute;
+        top: 8%;
+        margin-left: 55%;
+        user-select: none;
+    }
 
-.beam4 {
-    position: absolute;
-    top: 70px;
-    margin-left: 1050px;
-    user-select: none;
-}
+    .beam5 {
+        position: absolute;
+        top: 9%;
+        margin-left: 72%;
+        user-select: none;
+    }
 
-.beam5 {
-    position: absolute;
-    top: 120px;
-    margin-left: 1350px;
-    user-select: none;
+    .beam6 {
+        position: absolute;
+        top: 40%;
+        margin-left: 74%;
+        user-select: none;
+    }
 
-}
+    .beam7 {
+        position: absolute;
+        top: 62%;
+        margin-left: 63%;
+        user-select: none;
+    }
 
-.beam6 {
-    position: absolute;
-    top: 420px;
-    margin-left: 1450px;
-    user-select: none;
+    .smiles a {
+        position: absolute;
+        margin-top: 10.5%;
+        margin-left: 38.5%;
+        font-family: "Fira Sans Extra Condensed";
+        font-weight: 300;
+        font-size: 48px;
+        color: black;
+    }
 
-}
+    .child_smiles img {
+        user-select: none;
+        position: absolute;
+        padding-left: 37%;
+        margin-top: 13.5%;
+        height: 83px;
+        max-width: 464px;
+        width: 100%;
+    }
 
-.beam7 {
-    position: absolute;
-    top: 620px;
-    margin-left: 1350px;
-    user-select: none;
+    .flower {
+        max-width: 177px;
+        width: 100%;
+        position: absolute;
+        margin-left: 91%;
+        user-select: none;
+    }
 
-}
+    .studio {
+        position: absolute;
+        margin-top: 18.5%;
+        padding-left: 39%;
+        font-family: Roboto;
+        font-size:  18px;
+        font-weight: 400;
+        text-align: center;
+    }
 
-.smiles a {
-    position: absolute;
-    margin-top: 204px;
-    margin-left: 742px;
-    font-family: "Fira Sans Extra Condensed";
-    font-weight: 300;
-    font-size: 48px;
-    color: black;
-}
+    .home {
+        user-select: none;
+        position: absolute;
+        margin-top: 19.5%;
+    }
 
-.flower {
-    position: absolute;
-    margin-left:1785px;
-    user-select: none;
-}
+    .button {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
 
-.child_smiles img {
-    user-select: none;
-    position: absolute;
-    padding-left: 725px;
-    margin-top: 260px;
-    height: 83px;
-    width: 464px;
-}
+        font-family: Roboto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
 
-.studio {
-    position: absolute;
-    margin-top: 360px;
-    padding-left: 760px;
+        margin-top: 22%;
+        left: 40.5%;
 
-    font-family: Roboto;
-    font-size:  18px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.home {
-    user-select: none;
-    position: absolute;
-    margin-top: 370px;
-}
-
-.button {
-    user-select: none;
-    position: absolute;
-    cursor: pointer;
-
-    font-family: Roboto;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-
-    top: 550px;
-    left: 810px;
-
-    width: 249px;
-    height: 51px;
-    border-radius: 50px;
-    border: 1px solid #000000;
-    margin-left: 40px;
+        width: 249px;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        margin-left: 40px;
+    }
 
     /* При наведении и нажатии*/
-    &:hover {
-     background-color: #FFF06D;
- }
-    &:active {
-     background-color: #FFF06D;
- }
+    .button:hover {
+        background-color: #FFF06D;
+    }
+    .button:active {
+        background-color: #FFF06D;
+    }
 
-}
+    .lyambda {
+        position: absolute;
+        max-width: 100%;
+        padding-top: 40%;
+        padding-left: 10%;
+    }
 
-.lyambda {
-    user-select: none;
-    position: absolute;
-    padding-left: 250px;
-    margin-top: 650px
+@media screen and (max-width: 1600px) {
+    /*Лучи*/
+    .beam {
+        position: absolute;
+        padding-top: 10%;
+        margin-left: 10%;
+        user-select: none;
+    }
+
+    .beam1 {
+        position: absolute;
+        margin-left: 20%;
+        user-select: none;
+    }
+
+    .beam2 {
+        position: absolute;
+        margin-left: 20%;
+        padding-top: 25%;
+        user-select: none;
+    }
+
+    .beam3 {
+        position: absolute;
+        top: 8%;
+        margin-left: 40%;
+        user-select: none;
+    }
+
+    .beam4 {
+        position: absolute;
+        top: 8%;
+        margin-left: 55%;
+        user-select: none;
+    }
+
+    .beam5 {
+        position: absolute;
+        top: 9%;
+        margin-left: 72%;
+        user-select: none;
+    }
+
+    .beam6 {
+        position: absolute;
+        top: 40%;
+        margin-left: 74%;
+        user-select: none;
+    }
+
+    .beam7 {
+        position: absolute;
+        top: 55%;
+        margin-left: 70%;
+        user-select: none;
+    }
+
+    .smiles a {
+        position: absolute;
+        margin-top: 10.5%;
+        margin-left: 38.5%;
+        font-family: "Fira Sans Extra Condensed";
+        font-weight: 300;
+        font-size: 48px;
+        color: black;
+    }
+
+    .child_smiles img {
+        user-select: none;
+        position: absolute;
+        padding-left: 37%;
+        margin-top: 13.5%;
+        height: 83px;
+        max-width: 464px;
+        width: 100%;
+    }
+
+    .flower {
+        max-width: 130px;
+        width: 100%;
+        position: absolute;
+        margin-left: 90.5%;
+        user-select: none;
+    }
+
+    .studio {
+        position: absolute;
+        margin-top: 19.5%;
+        padding-left: 39%;
+        font-family: Roboto;
+        font-size:  18px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .home {
+        user-select: none;
+        position: absolute;
+        margin-top: 19.5%;
+    }
+
+    .button {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
+
+        font-family: Roboto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+
+        margin-top: 24%;
+        left: 40.5%;
+
+        width: 249px;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        margin-left: 40px;
+    }
+
+    /* При наведении и нажатии*/
+    .button:hover {
+        background-color: #FFF06D;
+    }
+    .button:active {
+        background-color: #FFF06D;
+    }
+
+    .lyambda {
+        position: absolute;
+        max-width: 100%;
+        padding-top: 40%;
+        padding-left: 0%;
+    }
 }

@@ -13,11 +13,11 @@ function Header() {
     };
 
     const clickHandler1= () => {
-        window.location.href = 'https://2gis.ru/omsk/firm/70000001067193459?m=73.276957%2C55.046163%2F16';
+        window.open('https://2gis.ru/omsk/firm/70000001067193459?m=73.276957%2C55.046163%2F16', '_blank');
     };
 
     const clickHandler2 = () => {
-        window.location.href = 'https://vk.com/club217238950';
+        window.open('https://vk.com/club217238950', '_blank');
     };
 
     return (
@@ -30,10 +30,10 @@ function Header() {
                 <li><Link to="/news">Новости</Link></li>
                 <li><Link to="/works">Наши работы</Link></li>
                 <li><Link to="/art-shop">Арт-лавка</Link></li>
-                <li><Link to="/about">О нас</Link></li>
+                <li><Link to="/about_us">О нас</Link></li>
             </div>
             <div className={styles.layer2}>
-                <li> <a> +7 (913) 640-03-69 </a> </li>
+                <li> <a> +7 (913) 640-03-59 </a> </li>
                 <li> <img src="/png/2гис.png" alt="2гис" onClick={clickHandler1}/> </li>
                 <li> <img src="/png/вк.png" alt="вк" onClick={clickHandler2}/> </li>
             </div>

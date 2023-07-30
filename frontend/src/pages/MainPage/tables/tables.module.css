@@ -1,93 +1,272 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.tables {
-    position: absolute;
-    margin-top: 1450px;
+@media screen and (max-width: 1920px) {
+
+    .tables {
+        position: absolute;
+        margin-top: 80%;
+    }
+
+    .mesta {
+        position: relative;
+        left: 90%;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .frame1,
+    .frame2,
+    .frame3 {
+        top: 30%;
+
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        position: absolute;
+        display: inline-block;
+        margin-left: 5%;
+        max-width: 448px;
+        width: 100%;
+        height: 221px;
+        border-radius: 15%;
+        border: 1px solid #0000001A;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .frame1 {
+        max-width: 448px;
+        width: 100%;
+    }
+
+    .frame2 {
+        max-width: 370px;
+        width: 100%;
+        left: 105%;
+    }
+
+    .frame3 {
+        max-width: 448px;
+        width: 100%;
+        left: 203%;
+    }
+
+    .frame2 ul li,
+    .frame3 ul li {
+        margin-left: 5.5%;
+        padding: 6% 0%;
+    }
+
+    .frame1 ul li {
+        margin-left: 5%;
+        padding: 5% 0%;
+    }
+
+    .price {
+        position: relative;
+        margin-top: 50%;
+        left: 90%;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .button_price {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
+
+        font-family: Roboto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+
+        margin-top: 8%;
+        left: 112%;
+
+        max-width: 249px;
+        width: 100%;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        margin-left: 40px;
+    }
+    /* При наведении и нажатии*/
+    .button_price:hover {
+        background-color: #FFF06D;
+    }
+
+    .button_price:active {
+        background-color: #FFF06D;
+    }
+
+    .another_zavitushka {
+        max-width: 495px;
+        width: 100%;
+        user-select: none;
+        position: absolute;
+        top: -50%;
+    }
+
+    .flower {
+        max-width: 177px;
+        width: 100%;
+        user-select: none;
+        position: absolute;
+        padding-top: 0;
+        margin-left: 0;
+    }
+
+    .lyambda {
+        user-select: none;
+        position: absolute;
+
+        max-width: 400px;
+        width: 100%;
+        user-select: none;
+
+        padding-top: 30%;
+        left: 30%;
+    }
 }
 
-.mesta {
-    padding-left: 600px;
-    font-family: 'Roboto';
-    font-size: 20px;
-    font-weight: 500;
-}
+@media screen and (min-width: 1366px) and (max-width: 1600px) {
 
-.mesta a {
-    padding-left: 75px;
-}
+    .tables {
+        position: absolute;
+        margin-top: 80%;
+    }
 
-.frames {
-    position: absolute;
+    .mesta {
+        position: center;
+        left: 55%;
+        padding-top: 20%;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 500;
+    }
 
-    width: 1306px;
-    display: flex;
-    padding-left: 5px;
-}
+    .frame1,
+    .frame2,
+    .frame3 {
+        top: 45%;
+        font-family: Roboto;
+        font-size: 18px;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        max-width: 448px;
+        width: 100%;
+        height: 221px;
+        border-radius: 15%;
+        border: 1px solid #0000001A;
 
-.frames img {
-    margin-right: 250px;
-}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-.price {
-    margin-top: 300px;
-    padding-left: 600px;
+    .frame1 {
+        max-width: 448px;
+        width: 100%;
+        z-index: 1;
+    }
 
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 500;
-}
+    .frame2 {
+        max-width: 370px;
+        width: 100%;
+        left: 69%;
+    }
 
-.price a {
-    padding-left: 110px;
-}
+    .frame3 {
+        max-width: 448px;
+        width: 100%;
+        left: 127%;
+    }
 
-.button_price {
-    user-select: none;
-    position: absolute;
-    cursor: pointer;
+    .frame2 ul li,
+    .frame3 ul li {
+        margin-left: 5.5%;
+        padding: 6% 0%;
+    }
 
-    font-family: Roboto;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
+    .frame1 ul li {
+        margin-left: 5%;
+        padding: 5% 0%;
+    }
 
-    top: 475px;
-    left: 810px;
+    .price {
+        position: relative;
+        margin-top: 50%;
+        left: 55%;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+    }
 
-    width: 249px;
-    height: 51px;
-    border-radius: 50px;
-    border: 1px solid #000000;
-    margin-left: 40px;
+    .button_price {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
 
-/* При наведении и нажатии*/
-&:hover {
-     background-color: #FFF06D;
- }
-&:active {
-     background-color: #FFF06D;
- }
+        font-family: Roboto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
 
-}
+        margin-top: 7%;
+        left: 80%;
 
-.another_zavitushka {
-    user-select: none;
-    position: absolute;
-    margin-top: -180px;
-}
+        max-width: 249px;
+        width: 100%;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        margin-left: 40px;
+    }
+    /*  При наведении и нажатии*/
+    .button_price:hover {
+        background-color: #FFF06D;
+    }
 
-.flower {
-    user-select: none;
-    position: absolute;
-    padding-top: -40px;
-    margin-left: -600px;
-}
+    .button_price:active {
+        background-color: #FFF06D;
+    }
 
-.lyambda {
-    user-select: none;
-    position: absolute;
-    margin-top: 225px;
-    margin-left: -330px;
+    .another_zavitushka {
+        max-width: 495px;
+        width: 100%;
+        user-select: none;
+        position: absolute;
+        top: 0%;
+        z-index: 0;
+    }
+
+    .flower {
+        max-width: 177px;
+        width: 100%;
+        user-select: none;
+        position: absolute;
+        margin-left: 0;
+    }
+
+    .lyambda {
+        user-select: none;
+        position: absolute;
+
+        max-width: 400px;
+        width: 100%;
+        user-select: none;
+
+        padding-top: 30%;
+        left: 0%;
+    }
 }

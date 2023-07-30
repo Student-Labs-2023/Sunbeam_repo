@@ -23,8 +23,8 @@ function Main() {
             <img src="/png/beam6.png" alt="6 луч" className={styles.beam6}/>
             <img src="/png/beam7.png" alt="7 луч" className={styles.beam7}/>
             <a> Мы за</a>
-            <div className={styles.flower}>
-                <img src="/png/цветок.png" alt="цветок" />
+            <div>
+                <img  className={styles.flower} src="/png/цветок.png" alt="цветок" />
             </div>
             <div className={styles.child_smiles}>
                 <img src="/png/detskie_ulibki.png" alt="детские улыбки" />
@@ -40,6 +40,7 @@ function Main() {
                 Узнать расписание
                 <Link to="/schedule"></Link>
             </div>
+            <img className={styles.lyambda} src="/png/lyambda.png" alt="lyambda" />
         </div>
     );
 }

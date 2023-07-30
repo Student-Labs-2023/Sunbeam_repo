@@ -12,8 +12,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -47,7 +47,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "18.13.0",
     "javascript.nodejs.core.library.typings.version": "18.13.0",
-    "last_opened_file_path": "C:/Users/79237/Desktop/Проекты/React-With-Smooth-Scrolling",
+    "last_opened_file_path": "C:/Users/79237/Desktop/Проекты/sunbeam_effective-main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -72,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\store" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ScrollToTopButton" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\components" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\public" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_effective\frontend\src\pages\MainPage" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -132,6 +132,14 @@
       <workItem from="1689586775802" duration="3767000" />
       <workItem from="1689669513209" duration="20274000" />
       <workItem from="1689747096401" duration="32536000" />
+      <workItem from="1689921688250" duration="601000" />
+      <workItem from="1690179793165" duration="7909000" />
+      <workItem from="1690262335567" duration="5336000" />
+      <workItem from="1690363522119" duration="20154000" />
+      <workItem from="1690387436055" duration="11343000" />
+      <workItem from="1690452517897" duration="13318000" />
+      <workItem from="1690468384900" duration="11412000" />
+      <workItem from="1690488273441" duration="3882000" />
     </task>
     <servers />
   </component>

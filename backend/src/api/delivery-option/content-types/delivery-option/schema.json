@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delivery_options",
+  "info": {
+    "singularName": "delivery-option",
+    "pluralName": "delivery-options",
+    "displayName": "DeliveryOption"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "delievery_option_id": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "delivery_option"
+    }
+  }
+}

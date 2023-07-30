@@ -1,23 +1,53 @@
-.scroll-to-top-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: none;
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-    font-weight: 200;
-    cursor: pointer;
-    outline: none;
-    padding-top: 10px;
+@media screen and (max-width: 1920px) {
+    .scroll-to-top-button {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        display: none;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        font-weight: 200;
+        cursor: pointer;
+        outline: none;
+        padding-top: 10px;
+    }
+
+    /*Где кнопка будет показываться, когда пользователь долистает*/
+    .scroll-to-top-button.show {
+        display: block;
+        bottom: 10%;
+        transform: translateY(1000%);
+        transform: translateX(-1500%);
+    }
 }
-/*Где кнопка будет показываться, когда пользователь долистает*/
-.scroll-to-top-button.show {
-    display: block;
-    bottom: 10%;
-    transform: translateY(1000%);
-    transform: translateX(-1500%);
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+
+    .scroll-to-top-button {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        display: none;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        font-weight: 200;
+        cursor: pointer;
+        outline: none;
+        padding-top: 10px;
+    }
+    /*Где кнопка будет показываться, когда пользователь долистает*/
+    .scroll-to-top-button.show {
+        display: block;
+        bottom: 10%;
+        transform: translateY(1000%);
+        transform: translateX(-1100%);
+    }
 }

@@ -1,146 +1,348 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
 
-/*Рисунки*/
+@media screen and (max-width: 1920px) {
 
-.cat {
-    position: absolute;
-    user-select: none;
-    padding-left: 1625px;
-    margin-top: -200px;
-    z-index: -2;
+    /*Рисунки*/
+    .cat {
+        position: absolute;
+        user-select: none;
+        padding-left: 85%;
+        margin-top: -15%;
+        z-index: -2;
+    }
+
+    .zavitushka5 {
+        user-select: none;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .star {
+        position: absolute;
+        margin-top: 12%;
+        padding-left: 75%;
+        z-index: -3;
+        user-select: none;
+    }
+
+    /* Frames*/
+
+    .caption {
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -10%;
+        font-family: "Fira Sans Extra Condensed";
+        font-size: 48px;
+        font-weight: 300;
+    }
+
+    .whydrawingisgood {
+        display: flex;
+        margin-top: 235%;
+        width: 100%;
+    }
+
+    .text {
+        font-size: 18px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .first_ryad {
+        margin-top: -5%;
+    }
+
+    .circle_frame1{
+        position: absolute;
+        display: inline-block;
+        max-width: 553px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame2 {
+        left: 33%;
+        position: absolute;
+        display: inline-block;
+        max-width: 694px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame3 {
+        left: 71.5%;
+        position: absolute;
+        display: inline-block;
+        max-width: 468px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .second_ryad {
+        margin-top: 1%;
+    }
+
+    .circle_frame4 {
+        position: absolute;
+        display: inline-block;
+        max-width: 1022px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame5 {
+        left: 56%;
+        position: absolute;
+        display: inline-block;
+        max-width: 764px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .third_ryad {
+        margin-top: 7%;
+    }
+
+    .circle_frame6 {
+        position: absolute;
+        display: inline-block;
+        max-width: 542px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame7 {
+        left: 30.5%;
+        position: absolute;
+        display: inline-block;
+        max-width: 592px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame8 {
+        left: 63.5%;
+        position: absolute;
+        display: inline-block;
+        max-width: 622px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
-.zavitushka5 {
-    user-select: none;
-    position: absolute;
-    padding-top: 200px;
-    z-index: -1;
-}
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
 
-.star {
-    position: absolute;
-    margin-top: 300px;
-    padding-left: 1300px;
-    z-index: -3;
-    user-select: none;
-}
+    /*Рисунки*/
+    .cat {
+        position: absolute;
+        user-select: none;
+        margin-top: -22%;
+        z-index: -2;
+    }
 
-/* Frames*/
+    .zavitushka5 {
+        user-select: none;
+        position: absolute;
+        z-index: -1;
+    }
 
-.caption {
-    position: absolute;
-    margin-left: 25px;
-    margin-top: -100px;
-    font-family: "Fira Sans Extra Condensed";
-    font-size: 48px;
-    font-weight: 300;
-}
+    .star {
+        position: absolute;
+        margin-top: 12%;
+        padding-left: 75%;
+        z-index: -3;
+        user-select: none;
+    }
 
-.whydrawingisgood {
-    display: flex;
-    margin-top: 4100px;
-    width: 100%;
-}
+    /* Frames*/
+
+    .caption {
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -10%;
+        font-family: "Fira Sans Extra Condensed";
+        font-size: 48px;
+        font-weight: 300;
+    }
+
+    .whydrawingisgood {
+        display: flex;
+        margin-top: 280%;
+        width: 100%;
+    }
 
 
-.text {
-    font-size: 18px;
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 30px;
-    text-align: center;
-}
+    .text {
+        font-size: 18px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 30px;
+        text-align: center;
+    }
 
-.circle_frame1{
-    position: absolute;
-    display: inline-block;
-    width: 454px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+    .first_ryad {
+        margin-top: -5%;
 
-.circle_frame2 {
-    left: 750px;
-    position: absolute;
-    display: inline-block;
-    width: 444px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+    }
 
-.circle_frame3 {
-    left: 1460px;
-    position: absolute;
-    display: inline-block;
-    width: 368px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+    .circle_frame1{
+        position: absolute;
+        display: inline-block;
+        max-width: 443px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
 
-.second_ryad {
-    margin-top: 100px;
-}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-.circle_frame4 {
-    position: absolute;
-    display: inline-block;
-    width: 772px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+    .circle_frame2 {
+        left: 35.2%;
+        position: absolute;
+        display: inline-block;
+        max-width: 433px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
 
-.circle_frame5 {
-    left: 1315px;
-    position: absolute;
-    display: inline-block;
-    width: 514px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-.third_ryad {
-    margin-top: 200px;
-}
+    .circle_frame3 {
+        left: 69.5%;
+        position: absolute;
+        display: inline-block;
+        max-width: 368px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
 
-.circle_frame6 {
-    position: absolute;
-    display: inline-block;
-    width: 392px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-.circle_frame7 {
-    left: 700px;
-    position: absolute;
-    display: inline-block;
-    width: 392px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
-}
+    .second_ryad {
+        margin-top: 2.5%;
+    }
 
-.circle_frame8 {
-    left: 1435px;
-    position: absolute;
-    display: inline-block;
-    width: 392px;
-    height: 83px;
-    border-radius: 20px;
-    border: 2px solid #0000001A;
-    margin-left: 40px;
+    .circle_frame4 {
+        position: absolute;
+        display: inline-block;
+        max-width: 749px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame5 {
+        left: 62%;
+        position: absolute;
+        display: inline-block;
+        max-width: 474px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .third_ryad {
+        margin-top: 10%;
+    }
+
+    .circle_frame6 {
+        position: absolute;
+        display: inline-block;
+        max-width: 383px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame7 {
+        left: 30.5%;
+        position: absolute;
+        display: inline-block;
+        max-width: 404px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame8 {
+        left: 62.2%;
+        position: absolute;
+        display: inline-block;
+        max-width: 470px;
+        width: 100%;
+        height: 83px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }

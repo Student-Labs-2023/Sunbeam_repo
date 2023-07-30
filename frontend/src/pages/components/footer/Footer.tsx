@@ -6,11 +6,11 @@ import '@fontsource/roboto/300.css';
 function Footer() {
 
     const clickHandler1= () => {
-        window.location.href = 'https://2gis.ru/omsk/firm/70000001067193459?m=73.276957%2C55.046163%2F16';
+        window.open('https://2gis.ru/omsk/firm/70000001067193459?m=73.276957%2C55.046163%2F16', '_blank');
     };
 
     const clickHandler2 = () => {
-        window.location.href = 'https://vk.com/club217238950';
+        window.open('https://vk.com/club217238950', '_blank');
     };
 
     return (
