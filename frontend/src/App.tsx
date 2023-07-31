@@ -4,7 +4,7 @@ import MainPage from './pages/MainPage/MainPage';
 import './App.css';
 import SchedulePage from "./pages/SсhedulePage";
 import NewsPage from "./pages/NewsPage";
-import ArtShop from "./pages/ArtShop";
+import ArtShop from "./pages/ArtShop/ArtShop";
 import OurWorks from "./pages/OurWorks";
 import AboutUs from "./pages/AboutUs";
 

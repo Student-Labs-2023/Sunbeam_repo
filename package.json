@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "yarn-frontend": "cd frontend && yarn start",
-    "yarn-backend": "cd backend && yarn develop"
+    "develop": "strapi develop"
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.7",
