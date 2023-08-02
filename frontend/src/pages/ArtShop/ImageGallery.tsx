@@ -1,17 +1,15 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import { RootState } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { fetchImages } from "../../store/actions/actions";
 import { IImage } from "../../models/models";
+import { RootState } from "../../store/store";
 
-const ImageGallery: React.FC = () => {
-
+function ImageGallery() {
     const dispatch = useAppDispatch();
-    const { loading, images, error } = useSelector((state: RootState) => state.image);
+    const { loading, images, error } = useAppSelector((state: RootState) => state.image);
 
     useEffect(() => {
-        dispatch (fetchImages());
+        dispatch(fetchImages());
     }, [dispatch]);
 
     if (loading) {
@@ -24,16 +22,14 @@ const ImageGallery: React.FC = () => {
 
     return (
         <div>
-            <h1>Image Gallery</h1>
-            {images.map((image: IImage) => (
+            <h1> image</h1>
+            {images?.map((image) => (
                 <div key={image.id}>
-                    <img src={image.imageUrl} alt={image.description} />
-                    <p>Author: {image.author}</p>
-                    <p>Description: {image.description}</p>
+                    <img src={image.urls.regular} alt={image.description || image.user.name} />
                 </div>
             ))}
         </div>
     );
-};
+}
 
 export default ImageGallery;

@@ -13,7 +13,7 @@ const initialState: ImageState = {
     loading: false,
     error: "",
     count: 0,
-    images: mockImages, // Use the mock data as the initial state
+    images: []
 };
 
 export const imageSlice = createSlice({

@@ -1,8 +1,13 @@
 export interface IImage {
-    id: number;
-    imageUrl: string;
-    author: string;
-    description: string;
+    id: string; // Unsplash идентификатор изображения
+    urls: {
+        regular: string; // URL изображения среднего размера
+        small: string; // URL изображения маленького размера
+    };
+    user: {
+        name: string; // Имя автора изображения
+    };
+    description: string | null; // Описание изображения (может быть null)
 }
 
 export interface ServerResponse<T> {
