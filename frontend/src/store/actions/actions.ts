@@ -15,7 +15,6 @@ export const fetchImages = (page = 1, count = 25) => {
                     Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
                 },
             });
-            console.log(response.data); // работает ли api-шка
             dispatch(fetchSuccess(response.data.results));
         } catch (e) {
             dispatch(fetchError(e as Error));

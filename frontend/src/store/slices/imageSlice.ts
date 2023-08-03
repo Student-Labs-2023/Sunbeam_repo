@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IImage } from "../../models/models";
-import { mockImages } from "../../models/mockData";
 
 interface ImageState {
     loading: boolean;
