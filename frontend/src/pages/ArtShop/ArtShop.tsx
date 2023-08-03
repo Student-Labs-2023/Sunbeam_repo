@@ -8,9 +8,7 @@ import ImageGallery from "./ImageGallery";
 function ArtShop() {
     return (
         <div>
-            <Layout>
-                <ImageGallery/>
-            </Layout>
+            <ImageGallery/>
         </div>
     );
 }
