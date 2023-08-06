@@ -2,19 +2,19 @@ import React, { ReactNode } from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
+import {Outlet} from "react-router-dom";
+import styles from './layout.module.css';
 
-interface LayoutProps {
-    children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = () => {
     return (
-        <div>
+        <>
             <Header />
-            {children}
+            <div className={styles.content}>
+                <Outlet />
+            </div>
             <ScrollToTopButton/>
             <Footer />
-        </div>
+        </>
     );
 };
 

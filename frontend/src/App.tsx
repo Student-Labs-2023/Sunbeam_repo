@@ -4,20 +4,23 @@ import MainPage from './pages/MainPage/MainPage';
 import './App.css';
 import SchedulePage from "./pages/SсhedulePage";
 import NewsPage from "./pages/NewsPage";
-import ArtShop from "./pages/ArtShop";
+import ArtShop from "./pages/ArtShop/ArtShop";
 import OurWorks from "./pages/OurWorks";
 import AboutUs from "./pages/AboutUs";
+import Layout from "./pages/components/layout/Layout";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/schedule" element={<SchedulePage />} />
-                <Route path="/news" element={<NewsPage />} />
-                <Route path="/works" element={<OurWorks />} />
-                <Route path="/art-shop" element={<ArtShop />} />
-                <Route path="/about_us" element={<AboutUs />} />
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<MainPage/>}/>
+                    <Route path="/schedule" element={<SchedulePage />} />
+                    <Route path="/news" element={<NewsPage />} />
+                    <Route path="/works" element={<OurWorks />} />
+                    <Route path="/art-shop" element={<ArtShop />} />
+                    <Route path="/about_us" element={<AboutUs />} />
+                </Route>
             </Routes>
         </Router>
     );
