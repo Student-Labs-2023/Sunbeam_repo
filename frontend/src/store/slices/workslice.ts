@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axios from '../../axios';
 
 // Создание асинхронного thunk для получения данных о работах
 export const fetchWorks = createAsyncThunk('works/fetchWorks', async () => {
-    const response = await axios.get('/works');
+    const response = await axios.get('api/works');
     return response.data;
 });
 
