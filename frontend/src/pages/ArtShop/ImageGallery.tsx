@@ -5,7 +5,7 @@ import { IImage, ServerResponse } from "../../models/models";
 import { RootState } from "../../store/store";
 import axios from "../../axios";
 import styles from './imagegallery.module.css';
-import CustomModal from "../components/modal/modal";
+import CustomModal from "../../components/modal/modal";
 
 function ImageGallery() {
     const dispatch = useAppDispatch();
