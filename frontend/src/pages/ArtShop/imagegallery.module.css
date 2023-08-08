@@ -1,0 +1,38 @@
+.artshop {
+
+}
+
+.imageRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.imageWrapper {
+    margin: 0;
+    position: relative;
+    width: 422px;
+    height: 522px;
+
+    border: 1px solid #0000001A;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageWrapper:first-child {
+    margin-left: 30px;
+}
+
+.imageWrapper:nth-child(3) {
+    margin-right: 30px;
+}
+
+.everyimage {
+    width: 100%;
+    max-width: 382px;
+    height: 300px;
+    border-radius: 30px;
+}

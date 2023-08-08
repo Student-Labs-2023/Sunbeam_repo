@@ -12,8 +12,7 @@ import WhyDrawingIsGood from "./MainPage/why_drawing_is_good/WhyDrawingIsGood";
 function AboutUs() {
     return (
         <div>
-            <Layout>
-            </Layout>
+
         </div>
     );
 }

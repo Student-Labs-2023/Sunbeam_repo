@@ -13,13 +13,11 @@ import Layout from "../components/layout/Layout";
 function MainPage() {
     return (
         <div>
-            <Layout>
             <Main/>
             <AboutStudio/>
             <Tables/>
             <OurProgram/>
             <WhyDrawingIsGood/>
-            </Layout>
         </div>
     );
 }
