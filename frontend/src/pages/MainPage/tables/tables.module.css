@@ -131,8 +131,8 @@
         width: 100%;
         user-select: none;
 
-        padding-top: 30%;
-        left: 30%;
+        padding-top: 36%;
+        left: 37%;
     }
 }
 
@@ -239,15 +239,6 @@
 
     .button_price:active {
         background-color: #FFF06D;
-    }
-
-    .another_zavitushka {
-        max-width: 495px;
-        width: 100%;
-        user-select: none;
-        position: absolute;
-        top: 0%;
-        z-index: 0;
     }
 
     .flower {

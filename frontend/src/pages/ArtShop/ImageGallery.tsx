@@ -15,14 +15,12 @@ function ImageGallery() {
     const [images, setImages] = useState<IImage[]>([]);
     const [modalStates, setModalStates] = useState<boolean[]>([]);
 
-    const UNSPLASH_ACCESS_KEY = "GyyS1_VKTlG6Wl6UEQpxM8un31gYgFDMl4tO48AkDeQ";
-
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://api.unsplash.com/photos`, {
+        axios.get(`${process.env.REACT_APP_BASE_URL}/api/picture-author`, {
             params: { page: 1, per_page: 12 },
             headers: {
-                Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
+                Authorization: `Bearer 10f41287f8cc4801cb97c95eed16360c1aa6f5f0e392bf89d00e8e7ed601e3978d02a10bfdf5bb698fbb8986ab08c79fcafddeff80002f997b6daac6ad4d746ef27b1176de68fd26cb7ddcb40b7f97100551971883428f1b01d0682fb4b995eb10e26933649c08a0312a31eb8d0bd071054f1912fdb8994f0d065b577cac0519`,
             },
         }).then((response) => {
             setLoading(false);

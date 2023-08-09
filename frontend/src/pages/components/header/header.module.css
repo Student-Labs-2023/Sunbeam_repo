@@ -4,15 +4,10 @@
 @media screen and (max-width: 1920px){
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 176px;
+        height: 31px;
         margin-left: 20px;
         cursor: pointer;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
     }
 
     .header {
@@ -34,7 +29,7 @@
     }
 
     .layer {
-        margin-left: 233px;
+        margin-left: 150px;
     }
 
     .layer li {
@@ -132,15 +127,10 @@
 @media screen and (min-width: 1366px) and (max-width: 1600px) {
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 176px;
+        height: 31px;
         margin-left: 20px;
         cursor: pointer;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
     }
 
     .header {
