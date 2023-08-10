@@ -4,6 +4,7 @@
     /* Рисунки */
     .zavitushka2 {
         position: absolute;
+        user-select: none;
         margin-top: 125%;
         padding-left: 85%;
         width: 100%;
@@ -12,9 +13,10 @@
     }
 
     .zavitushka4 {
+        user-select: none;
         position: absolute;
         margin-top: 215%;
-        margin-left: 37%;
+        margin-left: 40%;
     }
 
     /* По программе */

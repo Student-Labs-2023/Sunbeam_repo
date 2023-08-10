@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './main.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/300.css';
@@ -10,6 +10,7 @@ function Main() {
 
     const clickHandler = () => {
         navigate('/schedule');
+        console.log('123')
     };
 
     return (
@@ -38,12 +39,11 @@ function Main() {
             <div className={styles.home}>
                 <img src="/png/домик.png" alt="домик" />
             </div>
-            {/* не работает кнопка*/}
             <div className={styles.button} onClick={clickHandler}>
                 Узнать расписание
-                <Link to="/schedule"></Link>
             </div>
-            <img className={styles.lyambda} src="/png/lyambda.png" alt="lyambda" />
+            {/*исправить стили*/}
+            {/*<img className={styles.lyambda} src="/png/lyambda.png" alt="lyambda" />*/}
         </div>
     );
 }

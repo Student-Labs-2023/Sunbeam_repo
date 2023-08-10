@@ -59,7 +59,7 @@
 
 .mi_za {
     margin-left: 37%;
-    margin-top: 10%;
+    margin-top: 13%;
     font-family: "Fira Sans Extra Condensed";
     font-weight: 300;
     font-size: 48px;
@@ -132,6 +132,7 @@
 .lyambda {
     position: absolute;
     max-width: 100%;
+    width: 519px;
     padding-top: 30%;
     padding-left: 12%;
 }

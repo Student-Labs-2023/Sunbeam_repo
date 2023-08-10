@@ -1,13 +1,68 @@
 export interface IImage {
-    id: string; // Unsplash идентификатор изображения
-    urls: {
-        regular: string; // URL изображения среднего размера
-        small: string; // URL изображения маленького размера
+    id: number;
+    attributes: {
+        picture_id: string;
+        title: string;
+        description: string;
+        image: {
+            data: Array<{
+                id: number;
+                attributes: {
+                    name: string;
+                    alternativeText: string | null;
+                    caption: string | null;
+                    width: number;
+                    height: number;
+                    formats: {
+                        thumbnail: {
+                            name: string;
+                            hash: string;
+                            ext: string;
+                            mime: string;
+                            path: string | null;
+                            width: number;
+                            height: number;
+                            size: number;
+                            url: string;
+                        };
+                    };
+                    hash: string;
+                    ext: string;
+                    mime: string;
+                    size: number;
+                    url: string;
+                    previewUrl: string | null;
+                    provider: string;
+                    provider_metadata: unknown | null;
+                    createdAt: string;
+                    updatedAt: string;
+                };
+            }>;
+        };
+        order: {
+            data: unknown | null;
+        };
+        picture_author: {
+            data: {
+                id: number;
+                attributes: {
+                    createdAt: string;
+                    updatedAt: string;
+                    publishedAt: string;
+                };
+            };
+        };
     };
-    user: {
-        name: string; // Имя автора изображения
+}
+
+export interface ISchedule {
+    id: number;
+    attributes: {
+        time: string;
+        day: string;
+        header: string;
+        number_of_children: number;
     };
-    description: string | null; // Описание изображения (может быть null)
 }
 
 export interface ServerResponse<T> {

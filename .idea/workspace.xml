@@ -4,6 +4,9 @@
     <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +82,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\SchedulePage" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ArtShop" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\store" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ScrollToTopButton" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -192,7 +195,11 @@
       <workItem from="1691421366928" duration="3797000" />
       <workItem from="1691425312141" duration="14000" />
       <workItem from="1691484329616" duration="6446000" />
-      <workItem from="1691569274605" duration="6714000" />
+      <workItem from="1691569274605" duration="12070000" />
+      <workItem from="1691644219972" duration="8157000" />
+      <workItem from="1691659474146" duration="12704000" />
+      <workItem from="1691679493682" duration="301000" />
+      <workItem from="1691679830932" duration="126000" />
     </task>
     <servers />
   </component>

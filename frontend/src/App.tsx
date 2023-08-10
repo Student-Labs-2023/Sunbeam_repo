@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage/MainPage';
 import './App.css';
-import SchedulePage from "./pages/SсhedulePage";
+import SchedulePage from "./pages/SchedulePage/SсhedulePage";
 import NewsPage from "./pages/NewsPage";
 import ArtShop from "./pages/ArtShop/ArtShop";
 import OurWorks from "./pages/OurWorks";
 import AboutUs from "./pages/AboutUs";
-import Layout from "./pages/components/layout/Layout";
+import Layout from "./components/layout/Layout";
 
 function App() {
     return (

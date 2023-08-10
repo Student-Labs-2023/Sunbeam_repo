@@ -39,7 +39,8 @@
 .imageWrapper {
     margin: 0;
     position: relative;
-    width: 422px;
+    width: 100%;
+    max-width: 422px;
     height: 522px;
 
     border: 1px solid #0000001A;
@@ -65,7 +66,7 @@
     font-weight: 400;
 }
 
-.username {
+.title {
     font-size: 18px;
     margin-top: 10px;
     font-family: Roboto;
