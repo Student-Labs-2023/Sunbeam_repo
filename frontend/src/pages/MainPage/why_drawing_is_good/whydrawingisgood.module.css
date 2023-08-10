@@ -14,15 +14,9 @@
     .zavitushka5 {
         user-select: none;
         position: absolute;
+        margin-top: 8%;
+        left: -170px;
         z-index: -1;
-    }
-
-    .star {
-        position: absolute;
-        margin-top: 12%;
-        padding-left: 75%;
-        z-index: -3;
-        user-select: none;
     }
 
     /* Frames*/
@@ -180,6 +174,7 @@
         position: absolute;
         user-select: none;
         margin-top: -22%;
+        right: 0;
         z-index: -2;
     }
 

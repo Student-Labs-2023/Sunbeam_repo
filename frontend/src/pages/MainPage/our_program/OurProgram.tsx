@@ -14,7 +14,9 @@ function OurProgram() {
 
     return (
         <div className={styles.ourprogram}>
-            <img src="/png/our_programs.png" alt="наши программы" className={styles.ourProgramImage} />
+            <div className={styles.caption}>
+                Наши программы
+            </div>
             <img src="/png/zavitushka2.png" alt="завитушка" className={styles.zavitushka2} />
             <div className={styles.circle_frames}>
                 <div className={styles.firstryad}>
@@ -73,8 +75,6 @@ function OurProgram() {
                         </div>
                     </div>
                 </div>
-                <img src="/png/butterfly.png" alt="butterfly" className={styles.butterfly} />
-                <img src="/png/zavitushka3.png" alt="завитушка" className={styles.zavitushka3} />
                 <img src="/png/zavitushka4.png" alt="завитушка" className={styles.zavitushka4} />
             </div>
         </div>

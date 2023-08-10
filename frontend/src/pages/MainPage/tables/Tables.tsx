@@ -6,7 +6,6 @@ import '@fontsource/roboto/500.css';
 function Tables() {
     return (
         <div className={styles.tables}>
-            <img className={styles.another_zavitushka} src="/png/anotherzavitushka.png" alt="завитушка" />
             <h2 className={styles.mesta}>
                 Мы представляем бесплатные места для социальной категории семей. <br/>
                 Услуга оказывается безвозмездно, за счет средств студии
@@ -46,7 +45,7 @@ function Tables() {
                 <img src="/png/flower2.png" alt="цветок" />
             </div>
             <div className={styles.lyambda}>
-                <img src="/png/another_lyambda.png" alt="цветок" />
+                <img src="/png/another_lyambda.png" alt="лямбда" />
             </div>
         </div>
     );

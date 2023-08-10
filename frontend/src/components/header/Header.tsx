@@ -21,9 +21,7 @@ function Header() {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <img src="/png/sun_in_header.png" alt="Логотип" onClick={clickHandler} />
-            </div>
+            <img src="/png/logo_header.png" alt="Логотип" onClick={clickHandler} className={styles.logo}/>
             <div className={styles.layer}>
                 <li><Link to="/schedule">Расписание</Link></li>
                 <li><Link to="/news">Новости</Link></li>

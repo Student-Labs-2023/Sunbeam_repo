@@ -4,15 +4,10 @@
 @media screen and (max-width: 1920px){
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 176px;
+        height: 31px;
         margin-left: 20px;
         cursor: pointer;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
     }
 
     .header {
@@ -34,7 +29,7 @@
     }
 
     .layer {
-        margin-left: 233px;
+        margin-left: 150px;
     }
 
     .layer li {
@@ -98,7 +93,7 @@
         background-size: cover;
         position: absolute;
         bottom: 90.5%;
-        left: 50%;
+        left: 50.5%;
         transform: translateX(-50%);
     }
 
@@ -111,7 +106,7 @@
         background-size: cover;
         position: absolute;
         bottom: 90.5%;
-        left: 57%;
+        left: 58%;
         transform: translateX(-50%);
     }
 
@@ -124,7 +119,7 @@
         background-size: cover;
         position: absolute;
         bottom: 90.5%;
-        left: 63%;
+        left: 64%;
         transform: translateX(-50%);
     }
 }
@@ -132,15 +127,10 @@
 @media screen and (min-width: 1366px) and (max-width: 1600px) {
 
     .logo {
-        width: 60px;
-        height: 60px;
+        width: 176px;
+        height: 31px;
         margin-left: 20px;
         cursor: pointer;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
     }
 
     .header {
@@ -198,8 +188,8 @@
         background-image: url('/public/png/odindlyaclicka.png');
         background-size: cover;
         position: absolute;
-        bottom: 90%;
-        left: 35%;
+        bottom: 89%;
+        left: 37%;
         transform: translateX(-50%);
     }
 
@@ -211,8 +201,8 @@
         background-image: url('/public/png/dvadlyaclicka.png');
         background-size: cover;
         position: absolute;
-        bottom: 91%;
-        left: 42%;
+        bottom: 90%;
+        left: 46%;
         transform: translateX(-50%);
     }
 
@@ -224,8 +214,8 @@
         background-image: url('/public/png/tridlyaclicka.png');
         background-size: cover;
         position: absolute;
-        bottom: 91%;
-        left: 51%;
+        bottom: 90%;
+        left: 54.5%;
         transform: translateX(-50%);
     }
 
@@ -237,8 +227,8 @@
         background-image: url('/public/png/chetiredlyaclicka.png');
         background-size: cover;
         position: absolute;
-        bottom: 91%;
-        left: 59%;
+        bottom: 90%;
+        left: 64%;
         transform: translateX(-50%);
     }
 
@@ -250,8 +240,8 @@
         background-image: url('/public/png/pyatdlyaclicka.png');
         background-size: cover;
         position: absolute;
-        bottom: 91%;
-        left: 65%;
+        bottom: 90%;
+        left: 70%;
         transform: translateX(-50%);
     }
 }

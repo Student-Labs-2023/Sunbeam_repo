@@ -46,7 +46,7 @@
         width: 100%;
         pointer-events: none;
         position: absolute;
-        padding-left: 72%;
+        right: 0;
         margin-top: 40%;
         user-select: none;
     }
@@ -136,11 +136,11 @@
     }
 
     .risunok {
-        max-width: 530px;
+        max-width: 453px;
         width: 100%;
         pointer-events: none;
         position: absolute;
-        padding-left: 65%;
+        right: 0;
         margin-top: 40%;
         user-select: none;
     }
@@ -190,7 +190,7 @@
         width: 100%;
         pointer-events: none;
         position: absolute;
-        padding-left: 70%;
+        right: 0;
         margin-top: 65%;
     }
 }

@@ -24,6 +24,9 @@
 
 .modal_title {
     font-size: 18px;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-top: 50px;
 }
 
 .close_icon {
@@ -44,10 +47,16 @@
 }
 
 .modal_image {
-    max-width: 382px;
-    max-height: 330px;
-    width: auto;
-    height: auto;
+    max-width: 300px;
+    width: 100%;
+    max-height: 350px;
+}
+
+.title {
+    margin-top: 50px;
+    font-family: "Fira Sans Extra Condensed";
+    font-size: 48px;
+    font-weight: 300;
 }
 
 .modalOverlay {
