@@ -4,7 +4,8 @@
   "info": {
     "singularName": "picture",
     "pluralName": "pictures",
-    "displayName": "Picture"
+    "displayName": "Picture",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,14 +22,15 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "order": {
       "type": "relation",
@@ -36,10 +38,10 @@
       "target": "api::order.order",
       "mappedBy": "picture"
     },
-    "picture_author": {
+    "author": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::picture-author.picture-author",
+      "target": "api::author.author",
       "inversedBy": "pictures"
     }
   }

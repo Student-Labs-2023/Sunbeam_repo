@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "delivery_options",
+  "collectionName": "status_options",
   "info": {
-    "singularName": "delivery-option",
-    "pluralName": "delivery-options",
-    "displayName": "DeliveryOption",
+    "singularName": "status-option",
+    "pluralName": "status-options",
+    "displayName": "StatusOption",
     "description": ""
   },
   "options": {
@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "delievery_option_id": {
-      "type": "uid"
-    },
     "name": {
       "type": "string"
     },
@@ -22,7 +19,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order.order",
-      "mappedBy": "delivery_option"
+      "mappedBy": "status_option"
     }
   }
 }

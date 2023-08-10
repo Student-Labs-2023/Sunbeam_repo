@@ -1,5 +1,5 @@
 {
-  "/picture-authors": {
+  "/status-options": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PictureAuthorListResponse"
+                "$ref": "#/components/schemas/StatusOptionListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Picture-author"
+        "Status-option"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/picture-authors"
+      "operationId": "get/status-options"
     },
     "post": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PictureAuthorResponse"
+                "$ref": "#/components/schemas/StatusOptionResponse"
               }
             }
           }
@@ -235,23 +235,23 @@
         }
       },
       "tags": [
-        "Picture-author"
+        "Status-option"
       ],
       "parameters": [],
-      "operationId": "post/picture-authors",
+      "operationId": "post/status-options",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PictureAuthorRequest"
+              "$ref": "#/components/schemas/StatusOptionRequest"
             }
           }
         }
       }
     }
   },
-  "/picture-authors/{id}": {
+  "/status-options/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -259,7 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PictureAuthorResponse"
+                "$ref": "#/components/schemas/StatusOptionResponse"
               }
             }
           }
@@ -316,7 +316,7 @@
         }
       },
       "tags": [
-        "Picture-author"
+        "Status-option"
       ],
       "parameters": [
         {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/picture-authors/{id}"
+      "operationId": "get/status-options/{id}"
     },
     "put": {
       "responses": {
@@ -339,7 +339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PictureAuthorResponse"
+                "$ref": "#/components/schemas/StatusOptionResponse"
               }
             }
           }
@@ -396,7 +396,7 @@
         }
       },
       "tags": [
-        "Picture-author"
+        "Status-option"
       ],
       "parameters": [
         {
@@ -410,13 +410,13 @@
           }
         }
       ],
-      "operationId": "put/picture-authors/{id}",
+      "operationId": "put/status-options/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PictureAuthorRequest"
+              "$ref": "#/components/schemas/StatusOptionRequest"
             }
           }
         }
@@ -487,7 +487,7 @@
         }
       },
       "tags": [
-        "Picture-author"
+        "Status-option"
       ],
       "parameters": [
         {
@@ -501,7 +501,7 @@
           }
         }
       ],
-      "operationId": "delete/picture-authors/{id}"
+      "operationId": "delete/status-options/{id}"
     }
   }
 }

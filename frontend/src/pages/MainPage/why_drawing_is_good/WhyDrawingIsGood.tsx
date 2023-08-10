@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../why_drawing_is_good/whydrawingisgood.module.css'
+import styles from './whydrawingisgood.module.css'
 import '@fontsource/roboto/400.css';
 
 function WhyDrawingIsGood() {
