@@ -5,7 +5,7 @@ import { setContext } from '@apollo/client/link/context';
 import './App.css';
 import Layout from './components/layout/Layout';
 import MainPage from './pages/MainPage/MainPage';
-import SchedulePage from './pages/SchedulePage/SсhedulePage';
+import SchedulePage from './pages/SchedulePage/SchedulePage';
 import NewsPage from './pages/NewsPage';
 import OurWorks from './pages/OurWorks';
 import ArtShop from './pages/ArtShop/ArtShop';
