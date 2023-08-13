@@ -1,33 +1,33 @@
-services:
-  strapi:
-    image: sunbeam-strapi
-    depends_on:
-      - database
-    environment:
-      DATABASE_HOST: database
-      DATABASE_PORT: 5432
-      DATABASE_CLIENT: postgres
-      DATABASE_NAME: ${POSTGRES_DB}
-      DATABASE_USERNAME: ${POSTGRES_USER}
-      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
-    ports:
-      - 1337:1337
-    restart: unless-stopped
-  frontend:
-    container_name: frontend
-    image: sunbeam-frontend
-    depends_on:
-      - strapi
-    ports:
-      - 3000:3000
-    restart: unless-stopped
-  database:
-    image: postgres:latest
-    env_file: .env
-    ports:
-      - 5432:5432
-    environment:
-      PGDATA: /data/postgres
-    volumes:
-      - ./postgres:/data/postgres
+services: 
+  strapi: 
+    build: ./backend/ 
+    depends_on: 
+      - database 
+    environment: 
+      DATABASE_HOST: database 
+      DATABASE_PORT: 5432 
+      DATABASE_CLIENT: postgres 
+      DATABASE_NAME: ${POSTGRES_DB} 
+      DATABASE_USERNAME: ${POSTGRES_USER} 
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD} 
+    ports: 
+      - 1337:1337 
+    restart: unless-stopped 
+  frontend: 
+    container_name: frontend 
+    build: ./frontend/ 
+    depends_on: 
+      - strapi 
+    ports: 
+      - 3000:3000 
+    restart: unless-stopped 
+  database: 
+    image: postgres:latest 
+    env_file: .env 
+    ports: 
+      - 5432:5432 
+    environment: 
+      PGDATA: /data/postgres 
+    volumes: 
+      - ./postgres:/data/postgres 
     restart: unless-stopped
