@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "status_options",
+  "info": {
+    "singularName": "status-option",
+    "pluralName": "status-options",
+    "displayName": "StatusOption",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "status_option"
+    }
+  }
+}

@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/api/schedule/content-types/schedule/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/api/schedule/controllers/schedule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/api/schedule/documentation/1.0.0/schedule.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/api/schedule/routes/schedule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/api/schedule/services/schedule.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +61,14 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\79237\\Desktop\\Проекты\\sunbeam_repo\\frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
   }
 }</component>
   <component name="ReactDesignerToolWindowState">
@@ -84,10 +82,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\SchedulePage" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ArtShop" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\store" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ScrollToTopButton" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -187,7 +185,21 @@
       <workItem from="1690963579216" duration="5033000" />
       <workItem from="1690991823067" duration="1023000" />
       <workItem from="1691039478208" duration="2931000" />
-      <workItem from="1691080814502" duration="4289000" />
+      <workItem from="1691080814502" duration="5203000" />
+      <workItem from="1691086680327" duration="807000" />
+      <workItem from="1691125405560" duration="557000" />
+      <workItem from="1691240241251" duration="4632000" />
+      <workItem from="1691316052144" duration="1194000" />
+      <workItem from="1691345802123" duration="4000" />
+      <workItem from="1691419354330" duration="1745000" />
+      <workItem from="1691421366928" duration="3797000" />
+      <workItem from="1691425312141" duration="14000" />
+      <workItem from="1691484329616" duration="6446000" />
+      <workItem from="1691569274605" duration="12070000" />
+      <workItem from="1691644219972" duration="8157000" />
+      <workItem from="1691659474146" duration="12704000" />
+      <workItem from="1691679493682" duration="301000" />
+      <workItem from="1691679830932" duration="126000" />
     </task>
     <servers />
   </component>

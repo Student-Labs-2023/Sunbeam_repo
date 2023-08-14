@@ -21,9 +21,6 @@
     "delivery_adress": {
       "type": "text"
     },
-    "status": {
-      "type": "string"
-    },
     "picture": {
       "type": "relation",
       "relation": "oneToOne",
@@ -34,6 +31,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::delivery-option.delivery-option",
+      "inversedBy": "orders"
+    },
+    "status_option": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::status-option.status-option",
       "inversedBy": "orders"
     }
   }

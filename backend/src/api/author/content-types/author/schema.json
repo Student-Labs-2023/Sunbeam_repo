@@ -20,11 +20,11 @@
     "age": {
       "type": "integer"
     },
-    "picture_author": {
+    "pictures": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::picture-author.picture-author",
-      "inversedBy": "authors"
+      "relation": "oneToMany",
+      "target": "api::picture.picture",
+      "mappedBy": "author"
     }
   }
 }

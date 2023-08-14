@@ -24,3 +24,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: "Fira Sans Extra Condensed";
+  font-size: 48px;
+  font-weight: normal;
+}

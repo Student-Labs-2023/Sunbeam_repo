@@ -4,10 +4,11 @@
   "info": {
     "singularName": "delivery-option",
     "pluralName": "delivery-options",
-    "displayName": "DeliveryOption"
+    "displayName": "DeliveryOption",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

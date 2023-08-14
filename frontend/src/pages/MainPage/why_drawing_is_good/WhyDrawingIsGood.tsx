@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../why_drawing_is_good/whydrawingisgood.module.css'
+import styles from './whydrawingisgood.module.css'
 import '@fontsource/roboto/400.css';
 
 function WhyDrawingIsGood() {
@@ -40,7 +40,6 @@ function WhyDrawingIsGood() {
             </div>
             <img src="/png/cat.png" alt="кот" className={styles.cat} />
             <img src="/png/zavitushka5.png" alt="завитушка" className={styles.zavitushka5} />
-            <img src="/png/star.png" alt="звездочка" className={styles.star} />
         </div>
     );
 }

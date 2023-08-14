@@ -2,14 +2,9 @@
 
 @media screen and (max-width: 1920px) {
     /* Рисунки */
-    .ourProgramImage {
-        position: absolute;
-        margin-top: 130%;
-        padding-left: 38%;
-    }
-
     .zavitushka2 {
         position: absolute;
+        user-select: none;
         margin-top: 125%;
         padding-left: 85%;
         width: 100%;
@@ -17,26 +12,25 @@
         height: 715px;
     }
 
-    .butterfly {
-        position: absolute;
-        margin-top: 155%;
-        paddng-left: 3%;
-    }
-
-    .zavitushka3 {
-        position: absolute;
-        margin-top: 197%;
-        margin-left: -3%;
-        z-index: 1;
-    }
-
     .zavitushka4 {
+        user-select: none;
         position: absolute;
         margin-top: 215%;
-        margin-left: 37%;
+        margin-left: 40%;
     }
 
     /* По программе */
+
+    .caption {
+        position: absolute;
+        margin-top: 131%;
+        padding-left: 41.5%;
+
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        font-weight: 300;
+    }
+
     .firstryad {
         display: flex;
         margin-top: 137%;
@@ -167,20 +161,6 @@
         width: 100%;
         max-width: 385px;
         height: 715px;
-    }
-
-    .butterfly {
-        position: absolute;
-        margin-top: 180%;
-        paddng-left: 3%;
-        z-index: -1;
-    }
-
-    .zavitushka3 {
-        position: absolute;
-        margin-top: 230%;
-        margin-left: -3%;
-        z-index: 1;
     }
 
     .zavitushka4 {
