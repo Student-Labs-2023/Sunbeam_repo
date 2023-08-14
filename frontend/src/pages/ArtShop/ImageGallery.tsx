@@ -4,7 +4,7 @@ import { IImage } from "../../models/models";
 import { RootState } from "../../store/store";
 import axios from "../../axios";
 import styles from './imagegallery.module.css';
-import CustomModal from "../../components/modal/modal";
+import Modal_Image from "../../components/modal/modal_image";
 
 function ImageGallery() {
     const dispatch = useAppDispatch();
@@ -73,16 +73,18 @@ function ImageGallery() {
                                 <div key={image.id} className={styles.imageWrapper}>
                                     <img
                                         src={`http://localhost:1337${image.attributes.image.data[0].attributes.formats.thumbnail.url}`}
-                                        /*alt={image.attributes.description || image.attributes.picture_author.data.attributes.name}*/
                                         className={styles.everyimage}
                                     />
                                     <div className={styles.textWrapper}>
                                         <div className={styles.title}>{image.attributes.title}</div>
                                     </div>
+                                    <div className={styles.textWrapper}>
+                                        <div className={styles.author}>{image.attributes.author.data.attributes.full_name}, {image.attributes.author.data.attributes.age} лет</div>
+                                    </div>
                                     <div className={styles.button} onClick={() => openModal(rowIndex, imageIndex)}>
                                         Подробнее
                                     </div>
-                                    <CustomModal
+                                    <Modal_Image
                                         isOpen={modalStates[rowIndex * 3 + imageIndex]}
                                         onRequestClose={() => closeModal(rowIndex, imageIndex)}
                                         image={image}

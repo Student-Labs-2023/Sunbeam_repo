@@ -42,14 +42,14 @@ export interface IImage {
         order: {
             data: unknown | null;
         };
-        picture_author: {
+        author: {
             data: {
                 id: number;
                 attributes: {
-                    createdAt: string;
-                    updatedAt: string;
-                    publishedAt: string;
-                };
+                    author_id: number;
+                    full_name: string;
+                    age: number;
+                }
             };
         };
     };
