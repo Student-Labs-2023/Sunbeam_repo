@@ -17,6 +17,12 @@ interface FormData {
     last_name: string,
     middle_name: string,
     phone_number: string,
+    email: string,
+    country: string,
+    region: string,
+    city: string,
+    street_house_apps: string,
+    index: string,
 }
 
 function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
@@ -25,6 +31,12 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         last_name: '',
         middle_name: '',
         phone_number: '',
+        email: '',
+        country: '',
+        region: '',
+        city: '',
+        street_house_apps: '',
+        index: '',
     });
 
     const [errorMessages, setErrorMessages] = useState<FormData>({
@@ -32,6 +44,12 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         last_name: '',
         middle_name: '',
         phone_number: '',
+        email: '',
+        country: '',
+        region: '',
+        city: '',
+        street_house_apps: '',
+        index: '',
     });
 
     const handleSubmit = async (event: FormEvent) => {
@@ -105,6 +123,8 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         } else if (name === "phone_number") {
             // Фильтруем введенные символы, оставляя только цифры и символ "+"
             filteredValue = value.replace(/[^\d+]/g, '');
+        } else if (name === "index") {
+            filteredValue = value.replace(/[^\d+]/g, '');
         }
 
         setFormData((prevData) => ({
@@ -145,53 +165,141 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
                     {image?.attributes.author.data.attributes.full_name}, "{image?.attributes.title}"
                 </span>
                 <span style={{ margin: '0 70px' }}>
-                    1000 Р
+                    1000 ₽
                 </span>
                 <img src="/png/line_order.png" alt="line_order" className={styles.line_order} />
             </div>
             <div className={styles.necessarily}> * Поля, отмеченные звёздочкой, обязательны для заполнения </div>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                        type="text"
-                        name="first_name"
-                        value={formData.first_name}
-                        onChange={handleInputChange}
-                        placeholder="Имя"
-                    />
-                    {errorMessages.first_name && <span className={styles.error}>{errorMessages.first_name}</span>}
+                <div className={styles.inputLayer}>
+                    <div className={styles.firstLayer}>
+                        {/* First column */}
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Фамилия:*</label>
+                            <input
+                                type="text"
+                                name="last_name"
+                                value={formData.last_name}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Фамилия"
+                            />
+                            {errorMessages.last_name && <span className={styles.error}>{errorMessages.last_name}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Имя:* </label>
+                            <input
+                                type="text"
+                                name="first_name"
+                                value={formData.first_name}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Имя"
+                            />
+                            {errorMessages.first_name && <span className={styles.error}>{errorMessages.first_name}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Отчество</label>
+                            <input
+                                type="text"
+                                name="middle_name"
+                                value={formData.middle_name}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Отчество"
+                            />
+                            {errorMessages.middle_name && <span className={styles.error}>{errorMessages.middle_name}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Номер телефона:*</label>
+                            <input
+                                type="text"
+                                name="phone_number"
+                                value={formData.phone_number}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Телефон"
+                            />
+                            {errorMessages.phone_number && <span className={styles.error}>{errorMessages.phone_number}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Электронная почта:*</label>
+                            <input
+                                type="text"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Электронная почта"
+                            />
+                            {errorMessages.email && <span className={styles.error}>{errorMessages.email}</span>}
+                        </div>
+                    </div>
+                    <div className={styles.secondLayer}>
+                        {/* Second column */}
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Страна:*</label>
+                            <input
+                                type="text"
+                                name="country"
+                                value={formData.country}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Страна"
+                            />
+                            {errorMessages.country && <span className={styles.error}>{errorMessages.country}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Край/область/регион:* </label>
+                            <input
+                                type="text"
+                                name="region"
+                                value={formData.region}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Область"
+                            />
+                            {errorMessages.region && <span className={styles.error}>{errorMessages.region}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Город:*</label>
+                            <input
+                                type="text"
+                                name="city"
+                                value={formData.city}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Город"
+                            />
+                            {errorMessages.city && <span className={styles.error}>{errorMessages.city}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Улица, дом, квартира:*</label>
+                            <input
+                                type="text"
+                                name="street_house_apps"
+                                value={formData.street_house_apps}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Улица, дом, квартира"
+                            />
+                            {errorMessages.street_house_apps && <span className={styles.error}>{errorMessages.street_house_apps}</span>}
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.inputLabel}>Индекс:*</label>
+                            <input
+                                type="text"
+                                name="index"
+                                value={formData.index}
+                                onChange={handleInputChange}
+                                className={styles.inputField}
+                                placeholder="Индекс"
+                            />
+                            {errorMessages.index && <span className={styles.error}>{errorMessages.index}</span>}
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input
-                        type="text"
-                        name="last_name"
-                        value={formData.last_name}
-                        onChange={handleInputChange}
-                        placeholder="Фамилия"
-                    />
-                    {errorMessages.last_name && <span className={styles.error}>{errorMessages.last_name}</span>}
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        name="middle_name"
-                        value={formData.middle_name}
-                        onChange={handleInputChange}
-                        placeholder="Отчество"
-                    />
-                    {errorMessages.middle_name && <span className={styles.error}>{errorMessages.middle_name}</span>}
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        name="phone_number"
-                        value={formData.phone_number}
-                        onChange={handleInputChange}
-                        placeholder="Телефон"
-                    />
-                    {errorMessages.phone_number && <span className={styles.error}>{errorMessages.phone_number}</span>}
-                </div>
-                <button type="submit">Добавить пользователя</button>
+                <button type="submit" className={styles.submitButton}>Купить за 1000 ₽</button>
             </form>
         </Modal>
     );
