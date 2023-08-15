@@ -45,9 +45,21 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Higher z-index to ensure it covers the content */
+}
+
+.order_details {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.necessarily {
+    color: #A3A3A3;;
+    margin-top: 10px;
+    margin-left: 40px;
 }
