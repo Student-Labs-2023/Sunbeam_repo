@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IImage } from "../../models/models";
 import axios from "../../axios";
 import styles from './imagegallery.module.css';
-import Modal_Image from "../../components/modal/modal_image";
+import ModalImage from "../../components/modal/ModalImage";
 
 function ImageGallery() {
 
@@ -61,15 +61,15 @@ function ImageGallery() {
             </div>
             {loading ? <h1> Загрузка картин... </h1> : (
                 <div>
-                    <img src="/png/zavitushka3.png" alt="завитушка" className={styles.zavitushka}/>
-                    <img src="/png/starartshop.png" alt="завитушка" className={styles.star}/>
+                    <img src="/png/zavitushka3.png" className={styles.zavitushka} alt="zavitushka"/>
+                    <img src="/png/starartshop.png" className={styles.star} alt="start"/>
                     {imagesInRows.map((row, rowIndex) => (
                         <div key={rowIndex} className={styles.imageRow}>
                             {row.map((image: IImage, imageIndex) => (
                                 <div key={image.id} className={styles.imageWrapper}>
                                     <img
                                         src={`http://localhost:1337${image.attributes.image.data[0].attributes.formats.thumbnail.url}`}
-                                        className={styles.everyimage}
+                                        className={styles.everyimage} alt="image_from_server"
                                     />
                                     <div className={styles.textWrapper}>
                                         <div className={styles.title}>{image.attributes.title}</div>
@@ -80,7 +80,7 @@ function ImageGallery() {
                                     <div className={styles.button} onClick={() => openModal(rowIndex, imageIndex)}>
                                         Подробнее
                                     </div>
-                                    <Modal_Image
+                                    <ModalImage
                                         isOpen={modalStates[rowIndex * 3 + imageIndex]}
                                         onRequestClose={() => closeModal(rowIndex, imageIndex)}
                                         image={image}

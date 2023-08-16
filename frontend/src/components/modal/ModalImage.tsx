@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import styles from './modal_image.module.css';
+import styles from './modalimage.module.css';
 import { ModalProps } from '../../models/models';
-import Modal_Order from './modal_order';
+import ModalOrder from './ModalOrder';
 
 Modal.setAppElement('#root');
 
-function Modal_Image({ isOpen, onRequestClose, image }: ModalProps) {
+function ModalImage({ isOpen, onRequestClose, image }: ModalProps) {
     const [modalOrderIsOpen, setModalOrderIsOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const openModal_Order = () => {
+    const openModalOrder = () => {
         setModalOrderIsOpen(true);
     };
 
-    const closeModal_Order = () => {
+    const closeModalOrder = () => {
         setModalOrderIsOpen(false);
     };
 
@@ -46,7 +46,7 @@ function Modal_Image({ isOpen, onRequestClose, image }: ModalProps) {
                     <img
                         src={`http://localhost:1337${image.attributes.image.data[currentImageIndex].attributes.formats.thumbnail.url}`}
                         className={styles.modal_image}
-                        alt="Image"
+                        alt="image_from_server"
                     />
                 )}
             </div>
@@ -63,10 +63,10 @@ function Modal_Image({ isOpen, onRequestClose, image }: ModalProps) {
             <div className={styles.title}>{image?.attributes.title}</div>
             <div className={styles.author}>{image?.attributes.author.data.attributes.full_name}, {image?.attributes.author.data.attributes.age} лет</div>
             <div className={styles.description}>{image?.attributes.description || 'Без названия'} </div>
-            <div className={styles.button} onClick={openModal_Order}> Купить за 1000 ₽ </div>
-            <Modal_Order isOpen={modalOrderIsOpen} onRequestClose={closeModal_Order} image={image} />
+            <div className={styles.button} onClick={openModalOrder}> Купить за 1000 ₽ </div>
+            <ModalOrder isOpen={modalOrderIsOpen} onRequestClose={closeModalOrder} image={image} />
         </Modal>
     );
 }
 
-export default Modal_Image;
+export default ModalImage;

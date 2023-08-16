@@ -1,12 +1,12 @@
 import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
-import styles from './modal_order.module.css';
-import { IImage, IForm, ModalProps } from '../../models/models';
+import styles from './modalorder.module.css';
+import { IForm, ModalProps } from '../../models/models';
 import axios from '../../axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
+function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const [formData, setFormData] = useState<IForm>({
         first_name: '',
         last_name: '',
@@ -286,4 +286,4 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
     );
 }
 
-export default Modal_Order;
+export default ModalOrder;

@@ -42,7 +42,7 @@ function SchedulePage() {
     return (
         <div className={styles.schedule}>
             <div className={styles.centerText}>Расписание</div>
-            <img src="/png/heart_schedule.png" className={styles.heart} />
+            <img src="/png/heart_schedule.png" className={styles.heart} alt="heart"/>
             {loading ? (
                 <h1>Загрузка расписания</h1>
             ) : (
@@ -57,7 +57,7 @@ function SchedulePage() {
                                             <div key={schedule.id} className={styles.scheduleWrapper}>
                                                 <div className={styles.header}> {schedule.attributes.header} </div>
                                                 <div className={styles.childrens}> {schedule.attributes.number_of_children} человека<br/> в группе <br/> </div>
-                                                <img src="/png/line.png" className={styles.line}/>
+                                                <img src="/png/line.png" className={styles.line} alt="line"/>
                                                 <div className={styles.time}>{schedule.attributes.time}</div>
                                             </div>
                                         ))}
@@ -66,7 +66,7 @@ function SchedulePage() {
                             </div>
                         ))}
                     </div>
-                    <img src="/png/zavitushka_schedule.png" className={styles.zavitushka} />
+                    <img src="/png/zavitushka_schedule.png" className={styles.zavitushka} alt="zavitushka"/>
                 </div>
             )}
         </div>
