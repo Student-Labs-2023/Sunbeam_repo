@@ -16,7 +16,7 @@ function ImageGallery() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:1337/api/pictures/?populate=*`,
+        axios.get(`/api/pictures/?populate=*`,
         ).then((response: any) => {
             setLoading(false);
             setImages(response.data.data);

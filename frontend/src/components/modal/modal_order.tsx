@@ -1,32 +1,13 @@
 import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
 import styles from './modal_order.module.css';
-import { IImage } from '../../models/models';
+import { IImage, IForm, ModalProps } from '../../models/models';
 import axios from '../../axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-interface ModalOrderProps {
-    isOpen: boolean;
-    onRequestClose: () => void;
-    image: IImage | null;
-}
-
-interface FormData {
-    first_name: string,
-    last_name: string,
-    middle_name: string,
-    phone_number: string,
-    email: string,
-    country: string,
-    region: string,
-    city: string,
-    street_house_apps: string,
-    index: string,
-}
-
-function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
-    const [formData, setFormData] = useState<FormData>({
+function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
+    const [formData, setFormData] = useState<IForm>({
         first_name: '',
         last_name: '',
         middle_name: '',
@@ -39,7 +20,7 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         index: '',
     });
 
-    const [errorMessages, setErrorMessages] = useState<FormData>({
+    const [errorMessages, setErrorMessages] = useState<IForm>({
         first_name: '',
         last_name: '',
         middle_name: '',
@@ -57,14 +38,14 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         const validationErrors = validateFormData(formData);
         if (Object.keys(validationErrors).length === 0) {
             // Формирование full_name
-            const fullName = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
+            const buyer = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
 
-            const updatedFormData = { ...formData, full_name: fullName };
+            const updatedFormData = { ...formData, buyer: buyer };
 
             console.log('Form Data:', updatedFormData);
 
             try {
-                const response = await axios.post('http://localhost:1337/api/buyers', {
+                const response = await axios.post('/api/orders', {
                     "data": updatedFormData,
                 });
                 console.log('Successful POST Response:', response.data);
@@ -97,7 +78,7 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
                 });
             }
         } else {
-            setErrorMessages(validationErrors as SetStateAction<FormData>);
+            setErrorMessages(validationErrors as SetStateAction<IForm>);
 
             // Display an error toast notification for validation errors
             toast.error('Please fill out all required fields correctly.', {
@@ -137,8 +118,8 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalOrderProps) {
         }));
     };
 
-    const validateFormData = (data: FormData) => {
-        const errors: Partial<FormData> = {};
+    const validateFormData = (data: IForm) => {
+        const errors: Partial<IForm> = {};
 
         if (!data.first_name) {
             errors.first_name = 'Name is required';

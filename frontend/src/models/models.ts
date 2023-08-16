@@ -65,6 +65,25 @@ export interface ISchedule {
     };
 }
 
+export interface IForm {
+    first_name: string,
+    last_name: string,
+    middle_name: string,
+    phone_number: string,
+    email: string,
+    country: string,
+    region: string,
+    city: string,
+    street_house_apps: string,
+    index: string,
+}
+
+export interface ModalProps {
+    isOpen: boolean;
+    onRequestClose: () => void;
+    image: IImage | null;
+}
+
 export interface ServerResponse<T> {
     count: number;
     next: number;

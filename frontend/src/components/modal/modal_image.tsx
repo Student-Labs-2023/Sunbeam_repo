@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import styles from './modal_image.module.css';
-import { IImage } from '../../models/models';
+import { ModalProps } from '../../models/models';
 import Modal_Order from './modal_order';
-
-interface ModalProps {
-    isOpen: boolean;
-    onRequestClose: () => void;
-    image: IImage | null;
-}
 
 Modal.setAppElement('#root');
 
