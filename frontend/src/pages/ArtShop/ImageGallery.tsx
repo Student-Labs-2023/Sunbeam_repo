@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { IImage } from "../../models/models";
-import { RootState } from "../../store/store";
 import axios from "../../axios";
 import styles from './imagegallery.module.css';
 import Modal_Image from "../../components/modal/modal_image";
 
 function ImageGallery() {
-    const dispatch = useAppDispatch();
-    const { /*loading,*/ /*images,*/ error } = useAppSelector((state: RootState) => state.image);
 
     const [loading, setLoading] = useState(true);
     const [images, setImages] = useState<IImage[]>([]);

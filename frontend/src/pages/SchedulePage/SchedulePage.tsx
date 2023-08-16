@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../SchedulePage/schedulepage.module.css";
 import { ISchedule } from "../../models/models";
-import CustomModal from "../../components/modal/modal_image";
 import axios from "../../axios";
 
 function SchedulePage() {
