@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
 import styles from './modalorder.module.css';
-import { IForm, ModalProps } from '../../models/models';
+import { IForm, ModalProps, IImage } from '../../models/models';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { postOrder } from "../../api/api";
@@ -13,11 +13,11 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         middle_name: '',
         phone_number: '',
         email: '',
-        country: '',
         region: '',
         city: '',
         street_house_apps: '',
         index: '',
+        deliveryMethod: '',
     });
 
     const [errorMessages, setErrorMessages] = useState<IForm>({
@@ -26,12 +26,19 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         middle_name: '',
         phone_number: '',
         email: '',
-        country: '',
         region: '',
         city: '',
         street_house_apps: '',
         index: '',
+        deliveryMethod: '',
     });
+
+    const handleDeliveryMethodChange = (method: string) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            deliveryMethod: method,
+        }));
+    };
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
@@ -40,9 +47,9 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
 
             const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
 
-            const delivery_adress = [formData.country, formData.region, formData.city, formData.street_house_apps, formData.index].join(' ')
+            const delivery_adress = [formData.region, formData.city, formData.street_house_apps, formData.index].join(', ')
 
-            const updatedFormData = { ...formData, full_name: full_name, delivery_adress: delivery_adress };
+            const updatedFormData = { ...formData, full_name, delivery_adress, picture: image};
 
             try {
                 const response = await postOrder(updatedFormData);
@@ -95,8 +102,8 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
 
         let filteredValue = value;
 
-        if (name === "name") {
-            // Фильтруем введенные символы, оставляя только буквы
+        if (name === "last_name" || name === "first_name" || name === "middle_name" || name === "city" || name === "region") {
+            // Фильтруем введенные символы, оставляя только буквы и пробелы
             filteredValue = value.replace(/[^a-zA-Zа-яА-ЯёЁ\s]/g, '');
         } else if (name === "phone_number") {
             // Фильтруем введенные символы, оставляя только цифры и символ "+"
@@ -121,8 +128,26 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         if (!data.first_name) {
             errors.first_name = 'Name is required';
         }
+        if (!data.last_name) {
+            errors.last_name = 'Last_name is required';
+        }
         if (!data.phone_number) {
             errors.phone_number = 'Phone number is required';
+        }
+        if (!data.email) {
+            errors.email = 'Email is required';
+        }
+        if (!data.region) {
+            errors.region = 'Region is required';
+        }
+        if (!data.city) {
+            errors.city = 'City is required';
+        }
+        if (!data.street_house_apps) {
+            errors.street_house_apps = 'Street and house/apartment are required';
+        }
+        if (!data.index) {
+            errors.index = 'Index is required';
         }
 
         return errors;
@@ -188,6 +213,37 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                             />
                             {errorMessages.middle_name && <span className={styles.error}>{errorMessages.middle_name}</span>}
                         </div>
+                        {formData.deliveryMethod === "Доставка" && (
+                            <>
+                                <div className={styles.input_addContainer}>
+                                    <label className={styles.inputLabel}>Край/область/регион:*</label>
+                                    <input
+                                        type="text"
+                                        name="region"
+                                        value={formData.region}
+                                        onChange={handleInputChange}
+                                        className={styles.inputField}
+                                        placeholder="Край/область/регион"
+                                    />
+                                    {errorMessages.region && <span className={styles.error}>{errorMessages.region}</span>}
+                                </div>
+                                <div className={styles.input_addContainer}>
+                                    <label className={styles.inputLabel}>Город:*</label>
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={handleInputChange}
+                                        className={styles.inputField}
+                                        placeholder="Город"
+                                    />
+                                    {errorMessages.city && <span className={styles.error}>{errorMessages.city}</span>}
+                                </div>
+                            </>
+                        )}
+                    </div>
+                    <div className={styles.secondLayer}>
+                        {/* Second column */}
                         <div className={styles.inputContainer}>
                             <label className={styles.inputLabel}>Номер телефона:*</label>
                             <input
@@ -212,69 +268,51 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                             />
                             {errorMessages.email && <span className={styles.error}>{errorMessages.email}</span>}
                         </div>
-                    </div>
-                    <div className={styles.secondLayer}>
-                        {/* Second column */}
-                        <div className={styles.inputContainer}>
-                            <label className={styles.inputLabel}>Страна:*</label>
-                            <input
-                                type="text"
-                                name="country"
-                                value={formData.country}
-                                onChange={handleInputChange}
-                                className={styles.inputField}
-                                placeholder="Страна"
-                            />
-                            {errorMessages.country && <span className={styles.error}>{errorMessages.country}</span>}
+                        <div className={styles.buttonsContainer}>
+                            <button
+                                type="button"
+                                className={`${styles.deliveryButton} ${formData.deliveryMethod === 'Доставка' ? styles.selected : ''}`}
+                                onClick={() => handleDeliveryMethodChange('Доставка')}
+                            >
+                                <span className={styles.deliveryLabel}>Доставка</span>
+                            </button>
+                            <button
+                                type="button"
+                                className={`${styles.pickupButton} ${formData.deliveryMethod === 'Самовывоз' ? styles.selected : ''}`}
+                                onClick={() => handleDeliveryMethodChange('Самовывоз')}
+                            >
+                                <span className={styles.pickupLabel}>Самовывоз по адресу:</span>
+                                <span className={styles.addressLabel}>г. Омск, ул. Энергетиков, 70</span>
+                            </button>
                         </div>
-                        <div className={styles.inputContainer}>
-                            <label className={styles.inputLabel}>Край/область/регион:* </label>
-                            <input
-                                type="text"
-                                name="region"
-                                value={formData.region}
-                                onChange={handleInputChange}
-                                className={styles.inputField}
-                                placeholder="Область"
-                            />
-                            {errorMessages.region && <span className={styles.error}>{errorMessages.region}</span>}
-                        </div>
-                        <div className={styles.inputContainer}>
-                            <label className={styles.inputLabel}>Город:*</label>
-                            <input
-                                type="text"
-                                name="city"
-                                value={formData.city}
-                                onChange={handleInputChange}
-                                className={styles.inputField}
-                                placeholder="Город"
-                            />
-                            {errorMessages.city && <span className={styles.error}>{errorMessages.city}</span>}
-                        </div>
-                        <div className={styles.inputContainer}>
-                            <label className={styles.inputLabel}>Улица, дом, квартира:*</label>
-                            <input
-                                type="text"
-                                name="street_house_apps"
-                                value={formData.street_house_apps}
-                                onChange={handleInputChange}
-                                className={styles.inputField}
-                                placeholder="Улица, дом, квартира"
-                            />
-                            {errorMessages.street_house_apps && <span className={styles.error}>{errorMessages.street_house_apps}</span>}
-                        </div>
-                        <div className={styles.inputContainer}>
-                            <label className={styles.inputLabel}>Индекс:*</label>
-                            <input
-                                type="text"
-                                name="index"
-                                value={formData.index}
-                                onChange={handleInputChange}
-                                className={styles.inputField}
-                                placeholder="Индекс"
-                            />
-                            {errorMessages.index && <span className={styles.error}>{errorMessages.index}</span>}
-                        </div>
+                        {formData.deliveryMethod === "Доставка" && (
+                            <div className={styles.secondLayer}>
+                                <div className={styles.input_addContainer}>
+                                    <label className={styles.inputLabel}>Улица, дом, квартира:*</label>
+                                    <input
+                                        type="text"
+                                        name="street_house_apps"
+                                        value={formData.street_house_apps}
+                                        onChange={handleInputChange}
+                                        className={styles.inputField}
+                                        placeholder="Улица, дом, квартира"
+                                    />
+                                    {errorMessages.street_house_apps && <span className={styles.error}>{errorMessages.street_house_apps}</span>}
+                                </div>
+                                <div className={styles.input_addContainer}>
+                                    <label className={styles.inputLabel}>Индекс:*</label>
+                                    <input
+                                        type="text"
+                                        name="index"
+                                        value={formData.index}
+                                        onChange={handleInputChange}
+                                        className={styles.inputField}
+                                        placeholder="Индекс"
+                                    />
+                                    {errorMessages.index && <span className={styles.error}>{errorMessages.index}</span>}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <button type="submit" className={styles.submitButton}>Купить за 1000 ₽</button>

@@ -71,11 +71,11 @@ export interface IForm {
     middle_name: string,
     phone_number: string,
     email: string,
-    country: string,
     region: string,
     city: string,
     street_house_apps: string,
     index: string,
+    deliveryMethod: string
 }
 
 export interface ModalProps {

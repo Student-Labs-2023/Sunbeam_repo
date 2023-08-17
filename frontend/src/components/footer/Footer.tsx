@@ -26,8 +26,8 @@ function Footer() {
                     <li className={styles.phone}> {CONTACT_PHONE} </li>
                     <li className={styles.address}> {CONTACT_ADDRESS} </li>
                     <div className={styles.links}>
-                        <li><img src="/png/2гис.png" alt="2гис" onClick={() => navigateTo(GIS_LINK)}/></li>
-                        <li><img src="/png/вк.png" alt="вк" onClick={() => navigateTo(VK_LINK)}/></li>
+                        <li><img src="/png/2gis.png" alt="2gis" onClick={() => navigateTo(GIS_LINK)}/></li>
+                        <li><img src="/png/vk.png" alt="vk" onClick={() => navigateTo(VK_LINK)}/></li>
                     </div>
                 </div>
                 <div className={styles.secondryad}>
