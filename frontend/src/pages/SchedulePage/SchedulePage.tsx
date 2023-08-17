@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../SchedulePage/schedulepage.module.css";
 import { ISchedule } from "../../models/models";
-import axios from "../../axios";
+import { getSchedule } from "../../api/api";
 
 function SchedulePage() {
     const [loading, setLoading] = useState(true);
@@ -10,11 +10,15 @@ function SchedulePage() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:1337/api/schedules`).then((response: any) => {
-            setLoading(false);
-            setScheduleData(response.data.data);
-            setModalStates(response.data.data.map(() => false));
-        });
+        getSchedule()
+            .then((response: ISchedule[]) => {
+                setLoading(false);
+                setScheduleData(response);
+                setModalStates(response.map(() => false));
+            })
+            .catch(error => {
+                setLoading(false);
+            });
     }, []);
 
     const uniqueDays = Array.from(new Set(scheduleData.map(schedule => schedule.attributes.day)));

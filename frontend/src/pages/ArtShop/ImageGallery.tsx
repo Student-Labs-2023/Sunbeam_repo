@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { IImage } from "../../models/models";
-import axios from "../../axios";
 import styles from './imagegallery.module.css';
 import ModalImage from "../../components/modal/ModalImage";
+import { getPictures } from "../../api/api";
 
 function ImageGallery() {
 
@@ -12,12 +12,15 @@ function ImageGallery() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`/api/pictures/?populate=*`,
-        ).then((response: any) => {
-            setLoading(false);
-            setImages(response.data.data);
-            setModalStates(response.data.data.map(() => false));
-        });
+        getPictures()
+            .then((response: IImage[]) => {
+                setLoading(false);
+                setImages(response);
+                setModalStates(response.map(() => false));
+            })
+            .catch(error => {
+                setLoading(false);
+            });
     }, []);
 
     const chunkedImages = (arr: IImage[], size: number) =>

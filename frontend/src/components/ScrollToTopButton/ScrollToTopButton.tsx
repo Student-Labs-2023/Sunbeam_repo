@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollToTopButton.css'; // Подключите файл стилей для кнопки
+import './ScrollToTopButton.css'
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -7,7 +7,7 @@ const ScrollToTopButton = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Добавляем плавность скролла
+            behavior: 'smooth',
         });
     };
 
@@ -26,10 +26,9 @@ const ScrollToTopButton = () => {
     };
 
     useEffect(() => {
-        // Добавляем обработчик события прокрутки при монтировании компонента
+
         window.addEventListener('scroll', handleScroll);
 
-        // Отписываемся от обработчика события при размонтировании компонента
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };

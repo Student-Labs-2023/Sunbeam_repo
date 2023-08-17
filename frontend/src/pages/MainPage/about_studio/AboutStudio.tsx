@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./aboutstudio.module.css";
-import '@fontsource/roboto/400.css';
 
 function AboutStudio() {
     return (

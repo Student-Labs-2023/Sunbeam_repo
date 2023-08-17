@@ -2,9 +2,9 @@ import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
 import styles from './modalorder.module.css';
 import { IForm, ModalProps } from '../../models/models';
-import axios from '../../axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { postOrder } from "../../api/api";
 
 function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const [formData, setFormData] = useState<IForm>({
@@ -37,20 +37,16 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         event.preventDefault();
         const validationErrors = validateFormData(formData);
         if (Object.keys(validationErrors).length === 0) {
-            // Формирование full_name
+
             const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
 
             const delivery_adress = [formData.country, formData.region, formData.city, formData.street_house_apps, formData.index].join(' ')
 
             const updatedFormData = { ...formData, full_name: full_name, delivery_adress: delivery_adress };
 
-            console.log('Form Data:', updatedFormData);
-
             try {
-                const response = await axios.post('/api/orders', {
-                    "data": updatedFormData,
-                });
-                console.log('Successful POST Response:', response.data);
+                const response = await postOrder(updatedFormData);
+                console.log('Successful POST Response:', response);
 
                 // Display a success toast notification
                 toast.success('Data submitted successfully!', {
@@ -63,10 +59,9 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                     progress: undefined,
                 });
 
-                // Handle successful response here
+
             } catch (error) {
                 console.error('Error in POST Request:', error);
-                // Handle error here
 
                 // Display an error toast notification
                 toast.error('An error occurred. Please try again.', {

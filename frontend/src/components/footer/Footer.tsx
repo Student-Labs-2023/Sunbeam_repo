@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../footer/footer.module.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/300.css';
+
+
 import {
     CONTACT_PHONE,
     CONTACT_ADDRESS,
