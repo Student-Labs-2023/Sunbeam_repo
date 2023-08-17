@@ -38,9 +38,11 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         const validationErrors = validateFormData(formData);
         if (Object.keys(validationErrors).length === 0) {
             // Формирование full_name
-            const buyer = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
+            const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
 
-            const updatedFormData = { ...formData, buyer: buyer };
+            const delivery_adress = [formData.country, formData.region, formData.city, formData.street_house_apps, formData.index].join(' ')
+
+            const updatedFormData = { ...formData, full_name: full_name, delivery_adress: delivery_adress };
 
             console.log('Form Data:', updatedFormData);
 

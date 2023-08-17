@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "buyer": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::buyer.buyer",
-      "inversedBy": "orders"
-    },
     "delivery_adress": {
       "type": "text"
     },
@@ -38,6 +32,15 @@
       "relation": "manyToOne",
       "target": "api::status-option.status-option",
       "inversedBy": "orders"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone_number": {
+      "type": "string"
     }
   }
 }
