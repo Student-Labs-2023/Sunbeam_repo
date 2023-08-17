@@ -77,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\api" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\SchedulePage" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ArtShop" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\store" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -203,7 +203,7 @@
       <workItem from="1692081698643" duration="14210000" />
       <workItem from="1692111779779" duration="23000" />
       <workItem from="1692117768926" duration="13361000" />
-      <workItem from="1692252024569" duration="1918000" />
+      <workItem from="1692252024569" duration="3181000" />
     </task>
     <servers />
   </component>
