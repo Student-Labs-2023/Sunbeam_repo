@@ -1,12 +1,12 @@
 import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
-import styles from './modal_order.module.css';
-import { IImage, IForm, ModalProps } from '../../models/models';
+import styles from './modalorder.module.css';
+import { IForm, ModalProps } from '../../models/models';
 import axios from '../../axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
+function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const [formData, setFormData] = useState<IForm>({
         first_name: '',
         last_name: '',
@@ -38,9 +38,11 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
         const validationErrors = validateFormData(formData);
         if (Object.keys(validationErrors).length === 0) {
             // Формирование full_name
-            const buyer = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
+            const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
 
-            const updatedFormData = { ...formData, buyer: buyer };
+            const delivery_adress = [formData.country, formData.region, formData.city, formData.street_house_apps, formData.index].join(' ')
+
+            const updatedFormData = { ...formData, full_name: full_name, delivery_adress: delivery_adress };
 
             console.log('Form Data:', updatedFormData);
 
@@ -286,4 +288,4 @@ function Modal_Order({ isOpen, onRequestClose, image }: ModalProps) {
     );
 }
 
-export default Modal_Order;
+export default ModalOrder;
