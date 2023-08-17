@@ -1,48 +1,25 @@
 import { useState, useEffect } from 'react';
-import { useQuery, gql } from '@apollo/client'
 import Work from '../../components/Work'
 import styles from './styles.module.css'
-
-const GET_OUR_WORKS = gql`
-  query GetOurWorks {
-    orders {
-      data {
-        attributes {
-          picture {
-            data {
-              attributes {
-                title,
-                image {
-                  data {
-                    attributes {
-                      formats
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import axios from '../../axios'
 
 function OurWorks() {
-  const { loading, error, data } = useQuery(GET_OUR_WORKS)
+  const [orders, setOrders] = useState<any>()
+  useEffect(() => {
+    axios.get('/api/orders?populate[0]=picture.image&populate[1]=picture.author')
+      .then((response: any) => setOrders(response.data.data))
+  }, [])
 
-  if (!loading && !error) {
-    const works = data.orders.data.map((work: any) => ({
-      title: work.attributes.picture.data.attributes.title,
-      imageUrl: work.attributes.picture.data.attributes.image.data[0].attributes.formats.thumbnail.url,
-    }))
+  if (orders) {
+    const works = orders.map((order: any) => order.picture)
 
     return (
       <div>
         <h1 style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          width: 'fit-content'
+          marginBottom: '90px',
+          width: 'fit-content',
         }}>
           Работы наших учеников
         </h1>

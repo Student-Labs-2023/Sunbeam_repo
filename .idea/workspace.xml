@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="" />
+    <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/config/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/middlewares/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/middlewares.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/middlewares.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/author/content-types/author/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/author/content-types/author/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/delivery-option/content-types/delivery-option/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/delivery-option/content-types/delivery-option/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/order/content-types/order/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/order/content-types/order/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/picture/content-types/picture/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/picture/content-types/picture/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/product/content-types/product/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/schedule/content-types/schedule/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/schedule/content-types/schedule/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/api/status-option/content-types/status-option/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/api/status-option/content-types/status-option/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
