@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IImage } from "../../models/models";
 import styles from './imagegallery.module.css';
 import ModalImage from "../../components/modal/ModalImage";
-import { getPictures} from "../../api/api";
+import { getPictures } from "../../api/api";
 
 function ImageGallery() {
 

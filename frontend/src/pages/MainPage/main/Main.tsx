@@ -2,15 +2,13 @@ import React from 'react';
 import styles from './main.module.css';
 import { useNavigate } from 'react-router-dom';
 
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/300.css';
-
 function Main() {
     const navigate = useNavigate();
 
-    const clickHandler = () => {
-        navigate('/schedule');
-        console.log('123')
+    const navigateTo = (path: string) => {
+        if (path === '/schedule') {
+            navigate(path);
+        }
     };
 
     return (
@@ -39,7 +37,7 @@ function Main() {
             <div className={styles.home}>
                 <img src="/png/домик.png" alt="домик" />
             </div>
-            <div className={styles.button} onClick={clickHandler}>
+            <div className={styles.button} onClick={() => navigateTo('/schedule')}>
                 Узнать расписание
             </div>
             {/*исправить стили*/}

@@ -1,6 +1,6 @@
 import instance from "../axios";
 
-export const postOrder = async (data: any) => { // Здесь можно заменить any на более конкретный тип
+export const postOrder = async (data: any) => {
     try {
         const response = await instance.post('/api/orders', { data });
         return response.data;

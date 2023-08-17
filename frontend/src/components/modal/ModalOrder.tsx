@@ -4,7 +4,7 @@ import styles from './modalorder.module.css';
 import { IForm, ModalProps } from '../../models/models';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { postOrder} from "../../api/api";
+import { postOrder } from "../../api/api";
 
 function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const [formData, setFormData] = useState<IForm>({

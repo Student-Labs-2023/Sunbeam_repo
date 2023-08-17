@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
-import '@fontsource/roboto/400.css';
 import {
     CONTACT_PHONE,
     GIS_LINK,

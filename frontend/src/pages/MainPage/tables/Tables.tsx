@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from "../tables/tables.module.css";
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
 
 function Tables() {
     return (

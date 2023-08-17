@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../SchedulePage/schedulepage.module.css";
 import { ISchedule } from "../../models/models";
-import { getSchedule} from "../../api/api";
+import { getSchedule } from "../../api/api";
 
 function SchedulePage() {
     const [loading, setLoading] = useState(true);
