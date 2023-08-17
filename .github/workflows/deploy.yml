@@ -9,7 +9,7 @@ jobs:
             - name: deploy 
               uses: appleboy/ssh-action@v1.0.0 
               with: 
-                host: 91.210.169.71 
+                host: sunbeam55.com 
                 username: deploy 
                 password: sunbeam 
                 script: |
@@ -17,5 +17,5 @@ jobs:
                     git checkout develop 
                     git pull origin develop 
                     docker compose down 
-                    docker image prune 
+                    docker image rm $(docker image ls -a -q) 
                     docker compose up -d
