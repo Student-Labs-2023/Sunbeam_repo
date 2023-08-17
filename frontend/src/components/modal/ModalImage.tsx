@@ -43,27 +43,41 @@ function ModalImage({ isOpen, onRequestClose, image }: ModalProps) {
             </div>
             <div className={styles.modal_content}>
                 {image && (
-                    <img
-                        src={`http://localhost:1337${image.attributes.image.data[currentImageIndex].attributes.formats.thumbnail.url}`}
-                        className={styles.modal_image}
-                        alt="image_from_server"
-                    />
+                    <div className={styles.image_container}>
+                        <img
+                            src={`http://localhost:1337${image.attributes.image.data[currentImageIndex].attributes.formats.thumbnail.url}`}
+                            className={styles.modal_image}
+                            alt="image_from_server"
+                        />
+                        {!isOnlyImage && (
+                            <div className={styles.modal_nav_buttons}>
+                                <button className={styles.modal_nav_button} onClick={prevImage}>
+                                    <img src="/png/left_button.png" alt="left_button" />
+                                </button>
+                                <div className={styles.dot_indicator}>
+                                    {image.attributes.image.data.map((_, index) => (
+                                        <div
+                                            key={index}
+                                            className={`${styles.dot} ${index === currentImageIndex ? styles.active_dot : ''}`}
+                                        />
+                                    ))}
+                                </div>
+                                <button className={styles.modal_nav_button} onClick={nextImage}>
+                                    <img src="/png/right_button.png" alt="right_button"/>
+                                </button>
+                            </div>
+                        )}
+                    </div>
                 )}
             </div>
-            {!isOnlyImage && (
-                <button className={styles.modal_nav_button} onClick={prevImage}>
-                    <img src="/png/left_button.png" alt="left_button" />
-                </button>
-            )}
-            {!isOnlyImage && (
-                <button className={styles.modal_nav_button} onClick={nextImage}>
-                    <img src="/png/right_button.png" alt="right_button"/>
-                </button>
-            )}
             <div className={styles.title}>{image?.attributes.title}</div>
             <div className={styles.author}>{image?.attributes.author.data.attributes.full_name}, {image?.attributes.author.data.attributes.age} лет</div>
             <div className={styles.description}>{image?.attributes.description || 'Без названия'} </div>
-            <div className={styles.button} onClick={openModalOrder}> Купить за 1000 ₽ </div>
+            <div className={styles.button_container}>
+                <div className={styles.button} onClick={openModalOrder}>
+                    Купить за 1000 ₽
+                </div>
+            </div>
             <ModalOrder isOpen={modalOrderIsOpen} onRequestClose={closeModalOrder} image={image} />
         </Modal>
     );
