@@ -9,7 +9,11 @@
   },
   "options": {
     "draftAndPublish": true,
-    "privateAttributes": ["createdAt", "updatedAt", "publishedAt"]
+    "privateAttributes": [
+      "createdAt",
+      "updatedAt",
+      "publishedAt"
+    ]
   },
   "pluginOptions": {},
   "attributes": {

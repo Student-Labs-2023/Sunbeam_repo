@@ -8,8 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "privateAttributes": ["createdAt", "updatedAt", "publishedAt"]
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -24,7 +23,7 @@
     },
     "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",

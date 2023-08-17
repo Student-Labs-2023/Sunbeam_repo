@@ -12,29 +12,36 @@ function refactorFormats(formats) {
   }
 }
 
-function refactorImage(image) {
-  const imageObject = image[0];
-  const imageNew = {
-    width: imageObject.width,
-    height: imageObject.height,
-    url: imageObject.url,
-    formats: imageObject.formats,
+function refactorImage(image, imageSize = null) {
+  const format = image.formats[imageSize];
+  if (imageSize) {
+    return {
+      width: format.width,
+      height: format.height,
+      url: format.url,
+    };
   }
 
-  refactorFormats(imageNew.formats);
+  const imageNew = {
+    width: image.width,
+    height: image.height,
+    url: image.url,
+    formats: image.formats,
+  };
+
+  refactorFormats(imageNew.formats, imageSize);
 
   return imageNew;
 }
 
-function refactorResponse(response) {
-  for (let key in response) {
-    if (typeof response[key] == 'object') {
-      refactorResponse(response[key]);
+function refactorResponse(data, imageSize = null) {
+  for (let key in data) {
+    if (/image.*/.test(data[key]?.mime) && 'formats' in data[key]) {
+      data[key] = refactorImage(data[key], imageSize);
     }
 
-    if (key == 'image' && Array.isArray(response[key])) {
-      response[key] = refactorImage(response[key]);
-    }
+    else if (typeof data[key] == 'object')
+      refactorResponse(data[key], imageSize);
   }
 }
 
@@ -44,7 +51,9 @@ async function respond(ctx, next) {
     return;
   }
 
-  refactorResponse(ctx.response.body);
+  const params = new URLSearchParams(ctx.request.url.split('?')[1])
+
+  refactorResponse(ctx.response.body, params.get('imageSize'));
 }
 
 module.exports = () => respond;
