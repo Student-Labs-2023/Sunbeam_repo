@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
- 'transformer': {
+  'transformer': {
     enabled: true,
     config: {
       responseTransforms: {
