@@ -17,7 +17,7 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         city: '',
         street_house_apps: '',
         index: '',
-        deliveryMethod: '',
+        delivery_method: '',
     });
 
     const [errorMessages, setErrorMessages] = useState<IForm>({
@@ -30,13 +30,13 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         city: '',
         street_house_apps: '',
         index: '',
-        deliveryMethod: '',
+        delivery_method: '',
     });
 
     const handleDeliveryMethodChange = (method: string) => {
         setFormData((prevData) => ({
             ...prevData,
-            deliveryMethod: method,
+            delivery_method: method,
         }));
     };
 
@@ -165,7 +165,7 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
             <div className={styles.order_details}>
                 <img src="/png/line_order.png" alt="line_order" className={styles.line_order} style={{ margin: '10px' }} />
                 <span style={{ margin: '0px 70px' }}>
-                    {image?.attributes.author.data.attributes.full_name}, "{image?.attributes.title}"
+                    {image?.author.full_name}, "{image?.title}"
                 </span>
                 <span style={{ margin: '0 70px' }}>
                     1000 ₽
@@ -213,7 +213,7 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                             />
                             {errorMessages.middle_name && <span className={styles.error}>{errorMessages.middle_name}</span>}
                         </div>
-                        {formData.deliveryMethod === "Доставка" && (
+                        {formData.delivery_method === "Доставка" && (
                             <>
                                 <div className={styles.input_addContainer}>
                                     <label className={styles.inputLabel}>Край/область/регион:*</label>
@@ -271,21 +271,21 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                         <div className={styles.buttonsContainer}>
                             <button
                                 type="button"
-                                className={`${styles.deliveryButton} ${formData.deliveryMethod === 'Доставка' ? styles.selected : ''}`}
+                                className={`${styles.deliveryButton} ${formData.delivery_method === 'Доставка' ? styles.selected : ''}`}
                                 onClick={() => handleDeliveryMethodChange('Доставка')}
                             >
                                 <span className={styles.deliveryLabel}>Доставка</span>
                             </button>
                             <button
                                 type="button"
-                                className={`${styles.pickupButton} ${formData.deliveryMethod === 'Самовывоз' ? styles.selected : ''}`}
+                                className={`${styles.pickupButton} ${formData.delivery_method === 'Самовывоз' ? styles.selected : ''}`}
                                 onClick={() => handleDeliveryMethodChange('Самовывоз')}
                             >
                                 <span className={styles.pickupLabel}>Самовывоз по адресу:</span>
                                 <span className={styles.addressLabel}>г. Омск, ул. Энергетиков, 70</span>
                             </button>
                         </div>
-                        {formData.deliveryMethod === "Доставка" && (
+                        {formData.delivery_method === "Доставка" && (
                             <div className={styles.secondLayer}>
                                 <div className={styles.input_addContainer}>
                                     <label className={styles.inputLabel}>Улица, дом, квартира:*</label>

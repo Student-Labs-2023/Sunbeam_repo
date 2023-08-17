@@ -18,6 +18,7 @@ function numeralOfAge(age: number) {
 }
 
 function Work({ title, author, image }: Params) {
+
   return (
     <div className={styles.work}>
       <img src={process.env.REACT_APP_API_URL + image.url} />

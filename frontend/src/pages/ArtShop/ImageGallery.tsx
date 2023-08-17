@@ -17,6 +17,7 @@ function ImageGallery() {
                 setLoading(false);
                 setImages(response);
                 setModalStates(response.map(() => false));
+                console.log(images)
             })
             .catch(error => {
                 setLoading(false);
@@ -64,21 +65,21 @@ function ImageGallery() {
             </div>
             {loading ? <h1> Загрузка картин... </h1> : (
                 <div>
-                    <img src="/png/zavitushka3.png" className={styles.zavitushka} alt="zavitushka"/>
-                    <img src="/png/starartshop.png" className={styles.star} alt="start"/>
+                    <img src="/png/zavitushka3.png" alt="завитушка" className={styles.zavitushka}/>
+                    <img src="/png/starartshop.png" alt="завитушка" className={styles.star}/>
                     {imagesInRows.map((row, rowIndex) => (
                         <div key={rowIndex} className={styles.imageRow}>
                             {row.map((image: IImage, imageIndex) => (
                                 <div key={image.id} className={styles.imageWrapper}>
                                     <img
-                                        src={`http://localhost:1337${image.attributes.image.data[0].attributes.formats.thumbnail.url}`}
-                                        className={styles.everyimage} alt="image_from_server"
+                                        src={`http://localhost:1337${image.image.formats.thumbnail.url}`}
+                                        className={styles.everyimage}
                                     />
                                     <div className={styles.textWrapper}>
-                                        <div className={styles.title}>{image.attributes.title}</div>
+                                        <div className={styles.title}>{image.title}</div>
                                     </div>
                                     <div className={styles.textWrapper}>
-                                        <div className={styles.author}>{image.attributes.author.data.attributes.full_name}, {image.attributes.author.data.attributes.age} лет</div>
+                                        <div className={styles.author}>{image.author.full_name}, {image.author.age} лет</div>
                                     </div>
                                     <div className={styles.button} onClick={() => openModal(rowIndex, imageIndex)}>
                                         Подробнее
