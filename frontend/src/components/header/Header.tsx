@@ -2,6 +2,11 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 import '@fontsource/roboto/400.css';
+import {
+    CONTACT_PHONE,
+    GIS_LINK,
+    VK_LINK
+} from '../../config/constants';
 
 function Header() {
 
@@ -26,9 +31,9 @@ function Header() {
                 <li><Link to="/about_us">О нас</Link></li>
             </div>
             <div className={styles.layer2}>
-                <li><a href="tel:+79136400359">+7 (913) 640-03-59</a></li>
-                <li><img src="/png/2гис.png" alt="2гис" onClick={() => navigateTo('https://2gis.ru/omsk/firm/70000001067193459?m=73.276957%2C55.046163%2F16')}/></li>
-                <li><img src="/png/вк.png" alt="вк" onClick={() => navigateTo('https://vk.com/club217238950')}/></li>
+                <li><a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE}</a></li>
+                <li><img src="/png/2гис.png" alt="2гис" onClick={() => navigateTo(GIS_LINK)}/></li>
+                <li><img src="/png/вк.png" alt="вк" onClick={() => navigateTo(VK_LINK)}/></li>
             </div>
         </nav>
     );
