@@ -1,0 +1,15 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package.json .
+RUN npm install
+
+ENV REACT_APP_API_URL "http://admin.sunbeam55.com"
+ENV 
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "run", "build"]
