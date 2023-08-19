@@ -3,9 +3,9 @@ import ImageGallery from "./ImageGallery";
 
 function ArtShop() {
     return (
-        <div>
+        <>
             <ImageGallery/>
-        </div>
+        </>
     );
 }
 

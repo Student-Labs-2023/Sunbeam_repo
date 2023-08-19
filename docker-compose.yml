@@ -16,6 +16,7 @@ services:
   frontend:
     container_name: frontend
     build: ./frontend/
+    env_file: ./frontend/.env
     volumes:
       - ./frontend_build/:/app/build/:rw
     depends_on:

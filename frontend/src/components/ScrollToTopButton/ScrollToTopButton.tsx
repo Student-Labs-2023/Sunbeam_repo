@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollToTopButton.css'
+import styles from './ScrollToTopButton.module.css';
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +16,6 @@ const ScrollToTopButton = () => {
         const screenWidth = window.innerWidth;
         let scrollThreshold;
 
-
         if (screenWidth < 1600) {
             scrollThreshold = 3.7 * windowHeight;
         } else {
@@ -26,7 +25,6 @@ const ScrollToTopButton = () => {
     };
 
     useEffect(() => {
-
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -36,7 +34,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button
-            className={`scroll-to-top-button ${isVisible ? 'show' : 'hide'}`}
+            className={`${styles.scrollToTopButton} ${isVisible ? styles.show : styles.hide}`}
             onClick={scrollToTop}
         >
             ^

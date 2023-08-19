@@ -31,8 +31,8 @@ function Header() {
             </div>
             <div className={styles.layer2}>
                 <li><a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE}</a></li>
-                <li><img src="/png/2гис.png" alt="2гис" onClick={() => navigateTo(GIS_LINK)}/></li>
-                <li><img src="/png/вк.png" alt="вк" onClick={() => navigateTo(VK_LINK)}/></li>
+                <li><img src="/png/2gis.png" alt="2gis" onClick={() => navigateTo(GIS_LINK)}/></li>
+                <li><img src="/png/vk.png" alt="vk" onClick={() => navigateTo(VK_LINK)}/></li>
             </div>
         </nav>
     );
