@@ -80,7 +80,7 @@
     max-width: 177px;
     width: 100%;
     position: absolute;
-    margin-left: 91%;
+    right: 0;
     user-select: none;
 }
 
@@ -218,7 +218,7 @@
         max-width: 130px;
         width: 100%;
         position: absolute;
-        margin-left: 90.5%;
+        right: 0;
         user-select: none;
     }
 

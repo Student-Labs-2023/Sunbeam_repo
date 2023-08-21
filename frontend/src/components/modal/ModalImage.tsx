@@ -54,14 +54,14 @@ function ModalImage({ isOpen, onRequestClose, image }: ModalProps) {
                                 <button className={styles.modal_nav_button} onClick={prevImage}>
                                     <img src="/png/left_button.png" alt="left_button" />
                                 </button>
-                                {/*<div className={styles.dot_indicator}>
-                                    {image.image.map((index:any) => (
+                                <div className={styles.dot_indicator}>
+                                    {Object.keys(image.image.formats).map((formatKey, index) => (
                                         <div
-                                            key={index}
+                                            key={formatKey}
                                             className={`${styles.dot} ${index === currentImageIndex ? styles.active_dot : ''}`}
                                         />
                                     ))}
-                                </div>*/}
+                                </div>
                                 <button className={styles.modal_nav_button} onClick={nextImage}>
                                     <img src="/png/right_button.png" alt="right_button"/>
                                 </button>

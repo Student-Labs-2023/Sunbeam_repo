@@ -7,11 +7,11 @@ import WhyDrawingIsGood from "./why_drawing_is_good/WhyDrawingIsGood";
 function MainPage() {
     return (
         <div>
-            <Main/>
+            {/*<Main/>
             <AboutStudio/>
             <Tables/>
             <OurProgram/>
-            <WhyDrawingIsGood/>
+            <WhyDrawingIsGood/>*/}
         </div>
     );
 }

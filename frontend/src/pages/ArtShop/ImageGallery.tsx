@@ -17,7 +17,6 @@ function ImageGallery() {
                 setLoading(false);
                 setImages(response);
                 setModalStates(response.map(() => false));
-                console.log(images)
             })
             .catch(error => {
                 setLoading(false);
