@@ -71,7 +71,7 @@ function ImageGallery() {
                             {row.map((image: IImage, imageIndex) => (
                                 <div key={image.id} className={styles.imageWrapper}>
                                     <img
-                                        src={`${process.env.REACT_APP_API_URL}+${image.attributes.image.data[0].attributes.formats.thumbnail.url}`}
+                                        src={`${process.env.REACT_APP_API_URL}${image.image.formats.thumbnail.url}`}
                                         className={styles.everyimage} alt="image_from_server"
                                     />
                                     <div className={styles.textWrapper}>
