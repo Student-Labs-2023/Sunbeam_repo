@@ -38,8 +38,8 @@ function WhyDrawingIsGood() {
                     <div className={styles.text}> Дает эмоциональную устойчивость </div>
                 </div>
             </div>
-            {/*<img src="/png/cat.png" alt="кот" className={styles.cat} />
-            <img src="/png/zavitushka5.png" alt="завитушка" className={styles.zavitushka5} />*/}
+            <img src="/png/cat.png" alt="кот" className={styles.cat} />
+            <img src="/png/zavitushka5.png" alt="завитушка" className={styles.zavitushka5} />
         </div>
     );
 }

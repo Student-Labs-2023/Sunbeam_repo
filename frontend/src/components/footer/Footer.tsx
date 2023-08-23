@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../footer/footer.module.css';
 
-
 import {
     CONTACT_PHONE,
     CONTACT_ADDRESS,
@@ -19,25 +18,29 @@ function Footer() {
     };
 
     return (
-        <div className={styles.footer}>
-            <img src="/png/footer.png" alt="footer" className={styles.footerImg} />
-            <nav className={styles.information}>
+        <footer className={styles.footer}>
+            {/*<img src="/png/footer.png" alt="footer" className={styles.footerImg} />
+            <div className={styles.contentContainer}>
                 <div className={styles.firstryad}>
-                    <li className={styles.phone}> {CONTACT_PHONE} </li>
-                    <li className={styles.address}> {CONTACT_ADDRESS} </li>
-                    <div className={styles.links}>
-                        <li><img src="/png/2gis.png" alt="2gis" onClick={() => navigateTo(GIS_LINK)}/></li>
-                        <li><img src="/png/vk.png" alt="vk" onClick={() => navigateTo(VK_LINK)}/></li>
-                    </div>
+                    <ul>
+                        <li className={styles.phone}>{CONTACT_PHONE}</li>
+                        <li className={styles.address}>{CONTACT_ADDRESS}</li>
+                        <div className={styles.links}>
+                            <li><img src="/png/2gis.png" alt="2gis" onClick={() => navigateTo(GIS_LINK)}/></li>
+                            <li><img src="/png/vk.png" alt="vk" onClick={() => navigateTo(VK_LINK)}/></li>
+                        </div>
+                    </ul>
                 </div>
                 <div className={styles.secondryad}>
-                    <li> © Луч солнца, {COPYRIGHT_YEAR} </li>
-                    <li> {LEGAL_INFO} </li>
-                    <li> ОГРНИП: {OGRNIP} </li>
+                    <ul>
+                        <li>© Луч солнца, {COPYRIGHT_YEAR}</li>
+                        <li>{LEGAL_INFO}</li>
+                        <li>ОГРНИП: {OGRNIP}</li>
+                    </ul>
                 </div>
-                <img src="/png/payments.png" alt="платежные системы" className={styles.payments}/>
-            </nav>
-        </div>
+            </div>
+            <img src="/png/payments.png" alt="платежные системы" className={styles.payments}/>*/}
+        </footer>
     );
 }
 

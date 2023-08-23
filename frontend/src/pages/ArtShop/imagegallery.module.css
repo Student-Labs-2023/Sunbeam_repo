@@ -1,142 +1,416 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
 
-.artshop {
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
+    .artshop_mobile {
+        display: none;
+    }
 
+    .centerText {
+        text-align: center;
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 100px;
+    }
+
+    .infoText {
+        text-align: center;
+        font-size: 18px;
+        font-family: Roboto;
+
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+
+    .priceText {
+        text-align: center;
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: 500;
+
+        margin-bottom: 150px;
+    }
+
+    .imageRow {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    .imageWrapper {
+        margin: 0;
+        position: relative;
+        width: 100%;
+        max-width: 422px;
+        height: 522px;
+
+        border: 1px solid #0000001A;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+    }
+
+    .textWrapper {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .description {
+        font-size: 20px;
+        margin-top: 5px;
+        font-family: Roboto;
+        font-weight: 400;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-top: 10px;
+        font-family: Roboto;
+        font-weight: 500;
+    }
+
+    .author {
+        margin-top: 3%;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .imageWrapper:first-child {
+        margin-left: 30px;
+    }
+
+    .imageWrapper:nth-child(3) {
+        margin-right: 30px;
+    }
+
+    .everyimage {
+        width: 100%;
+        max-width: 382px;
+        height: 300px;
+        border-radius: 30px;
+
+    }
+
+    .button {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 300;
+
+        max-width: 142px;
+        width: 100%;
+        height: 51px;
+
+        margin-top: 10%;
+
+        border-radius: 140px;
+        background-color: #dedede;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /* картинки*/
+    .flower {
+        width: 100%;
+        max-width: 154px;
+        position: absolute;
+        right: 0;
+        top: 45%;
+    }
+
+    .zavitushka {
+        width: 100%;
+        max-width: 294px;
+        position: absolute;
+        top: 105%;
+        z-index: 1;
+    }
+
+    .star {
+        position: absolute;
+        right: 0;
+        top: 170%
+    }
 }
 
-.centerText {
-    text-align: center;
-    font-size: 48px;
-    font-family: "Fira Sans Extra Condensed";
-    margin-top: 100px;
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+
+    .artshop_mobile {
+        display: none;
+    }
+
+    .centerText {
+        text-align: center;
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 100px;
+    }
+
+    .infoText {
+        text-align: center;
+        font-size: 18px;
+        font-family: Roboto;
+
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+
+    .priceText {
+        text-align: center;
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: 500;
+
+        margin-bottom: 150px;
+    }
+
+    .imageRow {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    .imageWrapper {
+        margin: 0;
+        position: relative;
+        width: 100%;
+        max-width: 422px;
+        height: 522px;
+
+        border: 1px solid #0000001A;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+    }
+
+    .textWrapper {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .description {
+        font-size: 20px;
+        margin-top: 5px;
+        font-family: Roboto;
+        font-weight: 400;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-top: 10px;
+        font-family: Roboto;
+        font-weight: 500;
+    }
+
+    .author {
+        margin-top: 3%;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .imageWrapper:first-child {
+        margin-left: 30px;
+    }
+
+    .imageWrapper:nth-child(3) {
+        margin-right: 30px;
+    }
+
+    .everyimage {
+        width: 100%;
+        max-width: 382px;
+        height: 300px;
+        border-radius: 30px;
+
+    }
+
+    .button {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 300;
+
+        max-width: 142px;
+        width: 100%;
+        height: 51px;
+
+        margin-top: 10%;
+
+        border-radius: 140px;
+        background-color: #dedede;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /* картинки*/
+    .flower {
+        width: 100%;
+        max-width: 154px;
+        position: absolute;
+        right: 0;
+        top: 45%;
+    }
+
+    .zavitushka {
+        width: 100%;
+        max-width: 294px;
+        position: absolute;
+        top: 105%;
+        z-index: 1;
+    }
+
+    .star {
+        position: absolute;
+        right: 0;
+        top: 170%
+    }
 }
 
-.infoText {
-    text-align: center;
-    font-size: 18px;
-    font-family: Roboto;
+@media screen and (max-width: 450px) {
 
-    margin-top: 75px;
-    margin-bottom: 50px;
-}
+    .artshop {
+        display: none;
+    }
 
-.priceText {
-    text-align: center;
-    font-size: 20px;
-    font-family: Roboto;
-    font-weight: 500;
+    .centerText {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 50px;
+    }
 
-    margin-bottom: 150px;
-}
+    .infoText {
+        text-align: center;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
 
-.imageRow {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px;
-}
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
 
-.imageWrapper {
-    margin: 0;
-    position: relative;
-    width: 100%;
-    max-width: 422px;
-    height: 522px;
+    .priceText {
+        text-align: center;
+        font-size: 16px;
+        font-family: Roboto;
+        font-weight: 500;
 
-    border: 1px solid #0000001A;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 50px;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .imageColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрирование по горизонтали */
+        justify-content: center; /* Центрирование по вертикали */
+    }
 
-    z-index: 2;
-}
+    .imageWrapper {
+        margin: 20px;
+        position: relative;
+        width: 100%;
+        max-width: 288px;
+        height: 344px;
 
-.textWrapper {
-    text-align: center;
-    padding: 10px;
-}
+        border: 1px solid #0000001A;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-.description {
-    font-size: 20px;
-    margin-top: 5px;
-    font-family: Roboto;
-    font-weight: 400;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-.title {
-    font-size: 18px;
-    margin-top: 10px;
-    font-family: Roboto;
-    font-weight: 500;
-}
+        z-index: 2;
+    }
 
-.author {
-    margin-top: 3%;
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 400;
-}
+    .textWrapper {
+        text-align: center;
+        padding: 10px;
+    }
 
-.imageWrapper:first-child {
-    margin-left: 30px;
-}
+    .description {
+        font-size: 20px;
+        margin-top: 5px;
+        font-family: Roboto;
+        font-weight: 400;
+    }
 
-.imageWrapper:nth-child(3) {
-    margin-right: 30px;
-}
+    .title {
+        font-size: 16px;
+        margin-top: 10px;
+        font-family: Roboto;
+        font-weight: 400;
+    }
 
-.everyimage {
-    width: 100%;
-    max-width: 382px;
-    height: 300px;
-    border-radius: 30px;
+    .author {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 350;
+    }
 
-}
+    .imageWrapper:first-child {
+        margin-left: 30px;
+    }
 
-.button {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
+    .imageWrapper:nth-child(3) {
+        margin-right: 30px;
+    }
 
-    max-width: 142px;
-    width: 100%;
-    height: 51px;
+    .everyimage {
+        width: 100%;
+        max-width: 248px;
+        height: 180px;
+        border-radius: 30px;
+    }
 
-    margin-top:10%;
+    .button {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 300;
 
-    border-radius: 140px;
-    background-color: #dedede;
+        max-width: 121px;
+        width: 100%;
+        height: 46px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
+        border-radius: 140px;
+        background-color: #dedede;
 
-/* картинки*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
-.flower {
-    width: 100%;
-    max-width: 154px;
-    position: absolute;
-    right: 0;
-    top: 45%;
-}
+    /* картинки*/
+    .flower {
+        display: none;
+    }
 
-.zavitushka {
-    width: 100%;
-    max-width: 294px;
-    position: absolute;
-    top: 105%;
-    z-index: 1;
-}
+    .zavitushka {
+        display: none;
+    }
 
-.star {
-    position: absolute;
-    right: 0;
-    top: 170%
+    .star {
+        display: none;
+    }
 }

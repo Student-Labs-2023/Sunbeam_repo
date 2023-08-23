@@ -70,6 +70,24 @@ function SchedulePage() {
                             </div>
                         ))}
                     </div>
+                    <div className={styles.daysColumn}>
+                        {sortedDays.map((day, dayIndex) => (
+                            <div key={dayIndex} className={styles.dayColumn}>
+                                <div className={styles.dayContainer}>
+                                    <div className={styles.dayOfWeek}>{day}</div>
+                                    <div className={styles.daySchedule}>
+                                        {groupedSchedule[day]?.map((schedule: ISchedule, index) => (
+                                            <div key={schedule.id} className={styles.scheduleWrapper}>
+                                                <div className={styles.time}>{schedule.time}</div>
+                                                <div className={styles.header}> {schedule.header} </div>
+                                                <div className={styles.childrens}> {schedule.number_of_children} человека в группе  </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                     <img src="/png/zavitushka_schedule.png" className={styles.zavitushka} alt="zavitushka"/>
                 </div>
             )}

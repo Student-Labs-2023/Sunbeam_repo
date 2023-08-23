@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
 @media screen and (min-width: 1601px) and (max-width: 2560px) {
 
@@ -348,12 +349,17 @@
     .cat {
         position: absolute;
         user-select: none;
-        margin-top: -22%;
+        margin-top: 35%;
+        max-width: 121px;
+        width: 100%;
         right: 0;
         z-index: -2;
     }
 
     .zavitushka5 {
+        margin-top: 140%;
+        max-width: 158px;
+        width: 100%;
         user-select: none;
         position: absolute;
         z-index: -1;
