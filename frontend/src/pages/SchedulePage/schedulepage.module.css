@@ -1,106 +1,322 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
 
-.centerText {
-    text-align: center;
-    font-size: 48px;
-    font-family: "Fira Sans Extra Condensed";
-    margin-top: 100px;
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
+    .centerText {
+        text-align: center;
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 100px;
+    }
+
+    .daysRow:nth-child(1) {
+        margin-left: 30px;
+    }
+
+    .daysRow {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    .dayColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    .dayContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dayOfWeek {
+        margin-bottom: 10px;
+        color: #A3A3A3;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .daySchedule {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .scheduleWrapper {
+        margin: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 169px;
+        height: 229px;
+
+        border: 1px solid #0000001A;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+    }
+
+    .line {
+        margin-bottom: 20px;
+    }
+
+    .header {
+        margin-bottom: 50px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .childrens {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .time {
+        margin-right: 20px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .noLessons {
+        color: gray;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .heart {
+        position: absolute;
+        right:0;
+        margin-top: -120px;
+    }
+
+    .zavitushka {
+        position: absolute;
+    }
 }
 
-.daysRow:nth-child(1) {
-    margin-left: 30px;
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    .centerText {
+        text-align: center;
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 100px;
+    }
+
+    .daysRow:nth-child(1) {
+        margin-left: 30px;
+    }
+
+    .daysRow {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    .dayColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+
+    .dayContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dayOfWeek {
+        margin-bottom: 10px;
+        color: #A3A3A3;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .daySchedule {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .scheduleWrapper {
+        margin: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 169px;
+        height: 229px;
+
+        border: 1px solid #0000001A;
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 2;
+    }
+
+    .line {
+        margin-bottom: 20px;
+    }
+
+    .header {
+        margin-bottom: 50px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .childrens {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
+
+    .time {
+        margin-right: 20px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .noLessons {
+        color: gray;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .heart {
+        position: absolute;
+        right:0;
+        margin-top: -120px;
+    }
+
+    .zavitushka {
+        position: absolute;
+    }
 }
 
-.daysRow {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px;
-}
+@media screen and (max-width: 450px) {
+    .centerText {
+        text-align: center;
+        font-size: 48px;
+        font-family: "Fira Sans Extra Condensed";
+        margin-top: 100px;
+    }
 
-.dayColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-}
+    .daysRow:nth-child(1) {
+        margin-left: 30px;
+    }
 
-.dayContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .daysRow {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
 
-.dayOfWeek {
-    margin-bottom: 10px;
-    color: #A3A3A3;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 500;
-}
+    .dayColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
 
-.daySchedule {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
+    .dayContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.scheduleWrapper {
-    margin: 10px;
-    position: relative;
-    width: 100%;
-    max-width: 169px;
-    height: 229px;
+    .dayOfWeek {
+        margin-bottom: 10px;
+        color: #A3A3A3;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+    }
 
-    border: 1px solid #0000001A;
-    border-radius: 30px;
+    .daySchedule {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .scheduleWrapper {
+        margin: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 169px;
+        height: 229px;
 
-    z-index: 2;
-}
+        border: 1px solid #0000001A;
+        border-radius: 30px;
 
-.line {
-    margin-bottom: 20px;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-.header {
-    margin-bottom: 50px;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-}
+        z-index: 2;
+    }
 
-.childrens {
-    margin-bottom: 50px;
-    margin-right: 50px;
-}
+    .line {
+        margin-bottom: 20px;
+    }
 
-.time {
-    margin-right: 20px;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-}
+    .header {
+        margin-bottom: 50px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
 
-.noLessons {
-    color: gray;
-    text-align: center;
-    margin-top: 10px;
-}
+    .childrens {
+        margin-bottom: 50px;
+        margin-right: 50px;
+    }
 
-.heart {
-    position: absolute;
-    right:0;
-    margin-top: -120px;
-}
+    .time {
+        margin-right: 20px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+    }
 
-.zavitushka {
-    position: absolute;
+    .noLessons {
+        color: gray;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .heart {
+        position: absolute;
+        right:0;
+        margin-top: -120px;
+    }
+
+    .zavitushka {
+        position: absolute;
+    }
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
 
-@media screen and (max-width: 2560px) {
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
 
     /*Рисунки*/
     .cat {
@@ -337,6 +337,186 @@
         border-radius: 20px;
         border: 2px solid #0000001A;
         margin-left: 2%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    /*Рисунки*/
+    .cat {
+        position: absolute;
+        user-select: none;
+        margin-top: -22%;
+        right: 0;
+        z-index: -2;
+    }
+
+    .zavitushka5 {
+        user-select: none;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .star {
+        position: absolute;
+        margin-top: 12%;
+        padding-left: 75%;
+        z-index: -3;
+        user-select: none;
+    }
+
+    /* Frames*/
+
+
+    .whydrawingisgood {
+        display: flex;
+        position: absolute;
+        top: 325%;
+        width: 100%;
+    }
+
+    .caption {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        left: 50%;
+        font-size: 26px;
+        font-family: "Fira Sans Extra Condensed";
+        font-weight: 300;
+        white-space: nowrap;
+    }
+
+    .text {
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 300;
+        margin-top: 23px;
+        text-align: center;
+    }
+
+    .first_ryad {
+        margin-top: 10%;
+        margin-right: 5%;
+    }
+
+    .circle_frame1{
+        position: absolute;
+        display: inline-block;
+        max-width: 193px;
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-left: 5%;
+        margin-bottom: 5%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame2 {
+        position: absolute;
+        display: inline-block;
+        max-width: 189px;
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 27%;
+        right: 5%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame3 {
+        position: absolute;
+        display: inline-block;
+        max-width: 202px;
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 54%;
+        margin-left: 5%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .second_ryad {
+        margin-top: 15%;
+    }
+
+    .circle_frame4 {
+
+        position: absolute;
+        display: inline-block;
+        max-width: 224px;
+        width: 100%;
+        height: 100px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 71%;
+        right: 5%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame5 {
+        position: absolute;
+        display: inline-block;
+        max-width: 227px;
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 105%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .third_ryad {
+        margin-top: 15%;
+        margin-right: 5%;
+    }
+
+    .circle_frame6 {
+        position: absolute;
+        display: inline-block;
+        max-width: 233px;
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 135%;
+        right: 5%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame7 {
+        position: absolute;
+        display: inline-block;
+        max-width: 228px;
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 157%;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .circle_frame8 {
+        position: absolute;
+        display: inline-block;
+        max-width: 181px;
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        border: 2px solid #0000001A;
+        margin-top: 178%;
+        right: 5%;
 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }

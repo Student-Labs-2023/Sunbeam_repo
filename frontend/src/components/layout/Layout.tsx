@@ -13,7 +13,7 @@ const Layout = () => {
                 <Outlet />
             </div>
             <ScrollToTopButton/>
-            {/*<Footer />*/}
+            <Footer />
         </>
     );
 };
