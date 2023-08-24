@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
 import styles from './modalorder.module.css';
-import { IForm, ModalProps, IImage } from '../../models/models';
+import { IForm, ModalProps} from '../../models/models';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { postOrder } from "../../api/api";

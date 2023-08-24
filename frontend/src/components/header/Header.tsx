@@ -85,7 +85,6 @@ function Header() {
                                 <li><Link to="/news" onClick={(e) => navigateTo('/news', e)}>Новости</Link></li>
                                 <li><Link to="/works" onClick={(e) => navigateTo('/works', e)}>Наши работы</Link></li>
                                 <li><Link to="/art-shop" onClick={(e) => navigateTo('/art-shop', e)}>Арт-лавка</Link></li>
-                                <li><Link to="/about_us" onClick={(e) => navigateTo('/about_us', e)}>О нас</Link></li>
                             </ul>
                         </div>
                     </nav>

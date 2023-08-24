@@ -8,6 +8,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 50px;
+
     }
 
     .newColumn {
@@ -127,11 +128,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-left: 35px;
     }
 
     .newColumn {
         flex: 1;
-        min-width: 300px; /* Регулируйте этот параметр в зависимости от вашего дизайна */
+        min-width: 300px;
     }
 
     .newsWrapper {

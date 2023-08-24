@@ -16,7 +16,6 @@ function NewsPage() {
                 setLoading(false);
                 setNews(response);
                 setModalStates(response.map(() => false));
-                console.log(`${process.env.REACT_APP_API_URL}${response[0].images.url}`);
             })
             .catch(error => {
                 setLoading(false);
@@ -58,6 +57,8 @@ function NewsPage() {
         setModalStates(updatedStates);
     };
 
+    console.log(groupedNews)
+
     return (
         <div className={styles.news}>
             <div className={styles.centerText}>Новости</div>
@@ -70,8 +71,8 @@ function NewsPage() {
                             {groupedNews[day]?.map((news: INew, index) => (
                                 <div key={news.id} className={styles.newsWrapper} >
                                     <img
-                                        src={`${process.env.REACT_APP_API_URL}${news.images.url}`}
-                                        className={styles.modal_image}
+                                        src={`${process.env.REACT_APP_API_URL}${news.images[0].url}`}
+                                        className={styles.image}
                                         alt="image_from_server" onClick={() => openModal(newsIndex)}
                                     />
                                     <div className={styles.header} onClick={() => openModal(newsIndex)}>{news.header}</div>
