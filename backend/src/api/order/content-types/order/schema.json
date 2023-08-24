@@ -8,12 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true,
-    "privateAttributes": [
-      "createdAt",
-      "updatedAt",
-      "publishedAt"
-    ]
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -25,12 +20,6 @@
       "relation": "oneToOne",
       "target": "api::picture.picture",
       "inversedBy": "order"
-    },
-    "delivery_option": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::delivery-option.delivery-option",
-      "inversedBy": "orders"
     },
     "status_option": {
       "type": "relation",
@@ -45,6 +34,9 @@
       "type": "email"
     },
     "phone_number": {
+      "type": "string"
+    },
+    "invoice_id": {
       "type": "string"
     }
   }

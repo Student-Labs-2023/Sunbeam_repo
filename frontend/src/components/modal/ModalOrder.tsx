@@ -1,10 +1,23 @@
-import React, { useState, ChangeEvent, FormEvent, SetStateAction } from 'react';
+import React, { useState, useEffect, ChangeEvent, FormEvent, SetStateAction } from 'react';
 import Modal from 'react-modal';
 import styles from './modalorder.module.css';
 import { IForm, ModalProps, IImage } from '../../models/models';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { postOrder } from "../../api/api";
+import axios from '../../axios';
+
+type Status = null | 'created' | 'sent' | 'paid' | 'expired';
+
+function PaymentStatusIndicator({ status }: { status: Status }) {
+    if (status == 'paid')
+        return <>Чек оплачен, заказ принят</>
+
+    if (status == 'expired')
+        return <>Чек больше не актуален</>
+
+    return <>Проверка оплаты...</>
+}
 
 function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const [formData, setFormData] = useState<IForm>({
@@ -33,6 +46,8 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         delivery_method: '',
     });
 
+    const [paymentStatus, setPaymentStatus] = useState<Status>(null);
+
     const handleDeliveryMethodChange = (method: string) => {
         setFormData((prevData) => ({
             ...prevData,
@@ -55,35 +70,51 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         if (Object.keys(validationErrors).length === 0) {
             const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
             const delivery_adress = formData.delivery_method === 'Самовывоз' ? 'Самовывоз' : [formData.region, formData.city, formData.street_house_apps, formData.index].join(', ');
-            const updatedFormData = { ...formData, full_name, delivery_adress, picture: image};
+            const updatedFormData = { ...formData, full_name, delivery_adress, picture: image, invoice_id: null};
 
-            try {
-                const response = await postOrder(updatedFormData);
-                console.log('Successful POST Response:', response);
+            const { invoice_url, invoice_id } = (await axios.post('/api/payment', {
+                payAmount: 1000,
+                clientEmail: updatedFormData.email,
+                clientPhone: updatedFormData.phone_number,
+            })).data;
 
-                toast.success('Data submitted successfully!', {
-                    position: 'top-right',
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
+            window.open(invoice_url, '_blank');
 
-            } catch (error) {
-                console.error('Error in POST Request:', error);
+            const interval = setInterval(async () => {
+                const status = (await axios.get('/api/payment?id=' + invoice_id)).data.status;
+                if (status == 'paid') {
+                    try {
+                        updatedFormData.invoice_id = invoice_id;
+                        const response = await postOrder(updatedFormData);
+                        console.log('Successful POST Response:', response);
 
-                toast.error('An error occurred. Please try again.', {
-                    position: 'top-right',
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-            }
+                        toast.success('Data submitted successfully!', {
+                            position: 'top-right',
+                            autoClose: 3000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+
+                        clearInterval(interval);
+                    } catch (error) {
+                        console.error('Error in POST Request:', error);
+
+                        toast.error('An error occurred. Please try again.', {
+                            position: 'top-right',
+                            autoClose: 3000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+                    }
+                }
+                setPaymentStatus(status);
+            }, 1000)
         } else {
             setErrorMessages(validationErrors as SetStateAction<IForm>);
 
@@ -317,6 +348,7 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                         )}
                     </div>
                 </div>
+                <PaymentStatusIndicator status={paymentStatus} />
                 <button type="submit" className={styles.submitButton}>Купить за 1000 ₽</button>
             </form>
         </Modal>
