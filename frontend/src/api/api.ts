@@ -26,3 +26,12 @@ export const getPictures = async () => {
         throw error;
     }
 };
+
+export const getNews = async () => {
+    try {
+        const response = await instance.get('api/news/?populate=*');
+        return response.data.data;
+    } catch (error) {
+        throw error;
+    }
+};

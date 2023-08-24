@@ -43,19 +43,24 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
         const validationErrors = validateFormData(formData);
+
+        // Если выбран способ "Самовывоз", убираем обязательность полей адреса
+        if (formData.delivery_method === 'Самовывоз') {
+            delete validationErrors.region;
+            delete validationErrors.city;
+            delete validationErrors.street_house_apps;
+            delete validationErrors.index;
+        }
+
         if (Object.keys(validationErrors).length === 0) {
-
             const full_name = [formData.last_name, formData.first_name, formData.middle_name].filter(Boolean).join(' ');
-
-            const delivery_adress = [formData.region, formData.city, formData.street_house_apps, formData.index].join(', ')
-
+            const delivery_adress = formData.delivery_method === 'Самовывоз' ? 'Самовывоз' : [formData.region, formData.city, formData.street_house_apps, formData.index].join(', ');
             const updatedFormData = { ...formData, full_name, delivery_adress, picture: image};
 
             try {
                 const response = await postOrder(updatedFormData);
                 console.log('Successful POST Response:', response);
 
-                // Display a success toast notification
                 toast.success('Data submitted successfully!', {
                     position: 'top-right',
                     autoClose: 3000,
@@ -66,11 +71,9 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                     progress: undefined,
                 });
 
-
             } catch (error) {
                 console.error('Error in POST Request:', error);
 
-                // Display an error toast notification
                 toast.error('An error occurred. Please try again.', {
                     position: 'top-right',
                     autoClose: 3000,
@@ -84,7 +87,6 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         } else {
             setErrorMessages(validationErrors as SetStateAction<IForm>);
 
-            // Display an error toast notification for validation errors
             toast.error('Please fill out all required fields correctly.', {
                 position: 'top-right',
                 autoClose: 3000,
@@ -126,28 +128,28 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
         const errors: Partial<IForm> = {};
 
         if (!data.first_name) {
-            errors.first_name = 'Name is required';
+            errors.first_name = 'Введите имя обязательно';
         }
         if (!data.last_name) {
-            errors.last_name = 'Last_name is required';
+            errors.last_name = 'Введите фамилию обязательно';
         }
         if (!data.phone_number) {
-            errors.phone_number = 'Phone number is required';
+            errors.phone_number = 'Введите телефон обязательно';
         }
         if (!data.email) {
-            errors.email = 'Email is required';
+            errors.email = 'Введите почту обязательно';
         }
         if (!data.region) {
-            errors.region = 'Region is required';
+            errors.region = 'Введите область обязательно';
         }
         if (!data.city) {
-            errors.city = 'City is required';
+            errors.city = 'Введите город обязательно';
         }
         if (!data.street_house_apps) {
-            errors.street_house_apps = 'Street and house/apartment are required';
+            errors.street_house_apps = 'Введите адрес обязательно';
         }
         if (!data.index) {
-            errors.index = 'Index is required';
+            errors.index = 'Введите индекс обязательно';
         }
 
         return errors;

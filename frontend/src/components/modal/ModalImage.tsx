@@ -45,7 +45,7 @@ function ModalImage({ isOpen, onRequestClose, image }: ModalProps) {
                 {image && (
                     <div className={styles.image_container}>
                         <img
-                            src={`http://localhost:1337${image.image.formats.thumbnail.url}`}
+                            src={`${process.env.REACT_APP_API_URL}${image.image.formats.thumbnail.url}`}
                             className={styles.modal_image}
                             alt="image_from_server"
                         />

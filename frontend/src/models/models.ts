@@ -37,6 +37,24 @@ export interface ISchedule {
     number_of_children: number;
 }
 
+export interface INew {
+    id: number;
+    header: string;
+    content: string;
+    new_published_at: string;
+    images: {
+        width: number;
+        height: number;
+        url: string;
+        formats: {
+            thumbnail: IImageFormat;
+            small?: IImageFormat;
+            medium?: IImageFormat;
+            large?: IImageFormat;
+        };
+    };
+}
+
 export interface IForm {
     first_name: string,
     last_name: string,
@@ -54,6 +72,12 @@ export interface ModalProps {
     isOpen: boolean;
     onRequestClose: () => void;
     image: IImage | null;
+}
+
+export interface ModalNewProps{
+    isOpen: boolean;
+    onRequestClose: () => void;
+    news: INew;
 }
 
 export interface ServerResponse<T> {
