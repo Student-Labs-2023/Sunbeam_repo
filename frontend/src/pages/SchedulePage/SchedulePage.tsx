@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../SchedulePage/schedulepage.module.css";
 import { ISchedule } from "../../models/models";
-import CustomModal from "../../components/modal/modal";
-import axios from "../../axios";
+import { getSchedule } from "../../api/api";
 
 function SchedulePage() {
     const [loading, setLoading] = useState(true);
@@ -11,14 +10,18 @@ function SchedulePage() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:1337/api/schedules`).then((response: any) => {
-            setLoading(false);
-            setScheduleData(response.data.data);
-            setModalStates(response.data.data.map(() => false));
-        });
+        getSchedule()
+            .then((response: ISchedule[]) => {
+                setLoading(false);
+                setScheduleData(response);
+                setModalStates(response.map(() => false));
+            })
+            .catch(error => {
+                setLoading(false);
+            });
     }, []);
 
-    const uniqueDays = Array.from(new Set(scheduleData.map(schedule => schedule.attributes.day)));
+    const uniqueDays = Array.from(new Set(scheduleData.map(schedule => schedule.day)));
 
     // Порядок дней недели
     const usualDayOrder = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
@@ -28,7 +31,7 @@ function SchedulePage() {
 
     const groupedSchedule: { [day: string]: ISchedule[] } = {};
     scheduleData.forEach((schedule) => {
-        const day = schedule.attributes.day;
+        const day = schedule.day;
         if (!groupedSchedule[day]) {
             groupedSchedule[day] = [];
         }
@@ -37,13 +40,13 @@ function SchedulePage() {
 
     // Чтобы когда учитель добавлял время ниже другого, оно отображалось корректно
     sortedDays.forEach(day => {
-        groupedSchedule[day]?.sort((a, b) => a.attributes.time.localeCompare(b.attributes.time));
+        groupedSchedule[day]?.sort((a, b) => a.time.localeCompare(b.time));
     });
 
     return (
         <div className={styles.schedule}>
             <div className={styles.centerText}>Расписание</div>
-            <img src="/png/heart_schedule.png" className={styles.heart} />
+            <img src="/png/heart_schedule.png" className={styles.heart} alt="heart"/>
             {loading ? (
                 <h1>Загрузка расписания</h1>
             ) : (
@@ -56,10 +59,10 @@ function SchedulePage() {
                                     <div className={styles.daySchedule}>
                                         {groupedSchedule[day]?.map((schedule: ISchedule, index) => (
                                             <div key={schedule.id} className={styles.scheduleWrapper}>
-                                                <div className={styles.header}> {schedule.attributes.header} </div>
-                                                <div className={styles.childrens}> {schedule.attributes.number_of_children} человека<br/> в группе <br/> </div>
-                                                <img src="/png/line.png" className={styles.line}/>
-                                                <div className={styles.time}>{schedule.attributes.time}</div>
+                                                <div className={styles.header}> {schedule.header} </div>
+                                                <div className={styles.childrens}> {schedule.number_of_children} человека<br/> в группе <br/> </div>
+                                                <img src="/png/line.png" className={styles.line} alt="line"/>
+                                                <div className={styles.time}>{schedule.time}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -67,7 +70,25 @@ function SchedulePage() {
                             </div>
                         ))}
                     </div>
-                    <img src="/png/zavitushka_schedule.png" className={styles.zavitushka} />
+                    <div className={styles.daysColumn}>
+                        {sortedDays.map((day, dayIndex) => (
+                            <div key={dayIndex} className={styles.dayColumn}>
+                                <div className={styles.dayContainer}>
+                                    <div className={styles.dayOfWeek}>{day}</div>
+                                    <div className={styles.daySchedule}>
+                                        {groupedSchedule[day]?.map((schedule: ISchedule, index) => (
+                                            <div key={schedule.id} className={styles.scheduleWrapper}>
+                                                <div className={styles.time}>{schedule.time}</div>
+                                                <div className={styles.header}> {schedule.header} </div>
+                                                <div className={styles.childrens}> {schedule.number_of_children} человека в группе  </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <img src="/png/zavitushka_schedule.png" className={styles.zavitushka} alt="zavitushka"/>
                 </div>
             )}
         </div>

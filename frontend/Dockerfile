@@ -5,8 +5,10 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
+ENV REACT_APP_API_URL "http://admin.sunbeam55.com"
+
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "build"]

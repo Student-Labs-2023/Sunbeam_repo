@@ -3,3 +3,5 @@ node_modules/
 .tmp
 postgres/
 .idea
+frontend_build/
+ssl/

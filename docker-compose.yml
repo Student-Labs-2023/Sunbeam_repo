@@ -13,21 +13,42 @@ services:
     ports: 
       - 1337:1337 
     restart: unless-stopped 
-  frontend: 
-    container_name: frontend 
-    build: ./frontend/ 
-    depends_on: 
-      - strapi 
-    ports: 
-      - 3000:3000 
-    restart: unless-stopped 
-  database: 
-    image: postgres:latest 
-    env_file: .env 
-    ports: 
-      - 5432:5432 
-    environment: 
-      PGDATA: /data/postgres 
-    volumes: 
-      - ./postgres:/data/postgres 
+  frontend:
+    container_name: frontend
+    build: ./frontend/
+    env_file: ./frontend/.env
+    volumes:
+      - ./frontend_build/:/app/build/:rw
+    depends_on:
+      - strapi
+    ports:
+      - 3000:3000
+    # restart: unless-stopped
+  database:
+    image: postgres:latest
+    env_file: .env
+    ports:
+      - 5432:5432
+    environment:
+      PGDATA: /data/postgres
+    volumes:
+      - ./postgres:/data/postgres
     restart: unless-stopped
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - certbot
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./frontend_build/:/app/:ro
+      - ./ssl/tests/:/var/www/certbot/:ro
+      - ./ssl/conf/:/etc/letsencrypt/:ro
+    ports:
+      - 80:80
+      - 443:443
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./ssl/conf/:/etc/letsencrypt:rw
+      - ./ssl/tests/:/var/www/certbot:rw
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email mail@gmail.com -d sunbeam55.com -d www.sunbeam55.com -d admin.sunbeam55.com --agree-tos

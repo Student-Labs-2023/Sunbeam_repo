@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "buyer": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::buyer.buyer",
-      "inversedBy": "orders"
-    },
     "delivery_adress": {
       "type": "text"
     },
@@ -27,17 +21,23 @@
       "target": "api::picture.picture",
       "inversedBy": "order"
     },
-    "delivery_option": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::delivery-option.delivery-option",
-      "inversedBy": "orders"
-    },
     "status_option": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::status-option.status-option",
       "inversedBy": "orders"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "invoice_id": {
+      "type": "string"
     }
   }
 }

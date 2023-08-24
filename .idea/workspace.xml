@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94abfb81-2a09-461b-91d3-caac5c724c10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\NewsPage" />
+      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\api" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src" />
       <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\SchedulePage" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\pages\components\ArtShop" />
-      <recent name="C:\Users\79237\Desktop\Проекты\sunbeam_repo\frontend\src\store" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -200,6 +196,19 @@
       <workItem from="1691659474146" duration="12704000" />
       <workItem from="1691679493682" duration="301000" />
       <workItem from="1691679830932" duration="126000" />
+      <workItem from="1691679976244" duration="5450000" />
+      <workItem from="1691736779252" duration="2462000" />
+      <workItem from="1691996609529" duration="18243000" />
+      <workItem from="1692018342102" duration="3584000" />
+      <workItem from="1692081698643" duration="14210000" />
+      <workItem from="1692111779779" duration="23000" />
+      <workItem from="1692117768926" duration="13361000" />
+      <workItem from="1692252024569" duration="22343000" />
+      <workItem from="1692514834039" duration="4547000" />
+      <workItem from="1692547747031" duration="8000" />
+      <workItem from="1692605439067" duration="19088000" />
+      <workItem from="1692864818967" duration="725000" />
+      <workItem from="1692865585181" duration="29595000" />
     </task>
     <servers />
   </component>

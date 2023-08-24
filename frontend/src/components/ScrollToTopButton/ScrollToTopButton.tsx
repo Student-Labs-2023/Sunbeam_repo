@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollToTopButton.css'; // Подключите файл стилей для кнопки
+import styles from './ScrollToTopButton.module.css';
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -7,7 +7,7 @@ const ScrollToTopButton = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Добавляем плавность скролла
+            behavior: 'smooth',
         });
     };
 
@@ -15,7 +15,6 @@ const ScrollToTopButton = () => {
         const windowHeight = window.innerHeight;
         const screenWidth = window.innerWidth;
         let scrollThreshold;
-
 
         if (screenWidth < 1600) {
             scrollThreshold = 3.7 * windowHeight;
@@ -26,10 +25,8 @@ const ScrollToTopButton = () => {
     };
 
     useEffect(() => {
-        // Добавляем обработчик события прокрутки при монтировании компонента
         window.addEventListener('scroll', handleScroll);
 
-        // Отписываемся от обработчика события при размонтировании компонента
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -37,7 +34,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button
-            className={`scroll-to-top-button ${isVisible ? 'show' : 'hide'}`}
+            className={`${styles.scrollToTopButton} ${isVisible ? styles.show : styles.hide}`}
             onClick={scrollToTop}
         >
             ^

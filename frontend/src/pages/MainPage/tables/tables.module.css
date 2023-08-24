@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
-@media screen and (max-width: 1920px) {
+
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
 
     .tables {
         position: absolute;
@@ -15,6 +16,18 @@
         font-family: 'Roboto';
         font-size: 20px;
         font-weight: 500;
+    }
+
+    .frames_mobile {
+        display: none;
+    }
+
+    .center_text {
+        display: none;
+    }
+
+    .list {
+        display: none;
     }
 
     .frame1,
@@ -132,11 +145,11 @@
         user-select: none;
 
         padding-top: 36%;
-        left: 37%;
+        left: 105%;
     }
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
 
     .tables {
         position: absolute;
@@ -144,13 +157,32 @@
     }
 
     .mesta {
-        position: center;
-        left: 55%;
-        padding-top: 20%;
+        position: relative;
+        margin-top: 20%;
+        left: 105%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        font-family: 'Roboto';
+        white-space: nowrap;
+        font-family: Roboto;
         font-size: 20px;
         font-weight: 500;
+    }
+
+    .frames_mobile {
+        display: none;
+    }
+
+    .center_text {
+        display: none;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .frames {
+        display: flex;
+        justify-content: space-between;
     }
 
     .frame1,
@@ -161,7 +193,6 @@
         font-size: 18px;
         position: absolute;
         display: inline-block;
-        left: 0;
         max-width: 448px;
         width: 100%;
         height: 221px;
@@ -175,18 +206,19 @@
         max-width: 448px;
         width: 100%;
         z-index: 1;
+        margin-left: 5%;
     }
 
     .frame2 {
         max-width: 370px;
         width: 100%;
-        left: 69%;
+        margin-left: 75%;
     }
 
     .frame3 {
         max-width: 448px;
         width: 100%;
-        left: 127%;
+        margin-left: 133%;
     }
 
     .frame2 ul li,
@@ -254,10 +286,122 @@
         position: absolute;
 
         max-width: 400px;
-        width: 100%;
         user-select: none;
 
         padding-top: 30%;
-        left: 0%;
+        left: 75%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .tables {
+        position: absolute;
+        top: 122%;
+    }
+
+    .mesta {
+        position: center;
+        padding-top: 20%;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .frames_mobile {
+        padding-right: 15px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        position: absolute;
+        top: 250%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 288px;
+        width: 100%;
+        height: 460px;
+        border-radius: 30px;
+        border: 1px solid #0000001A;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .centered_text {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .list {
+        padding-left: 40px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: Roboto;
+        font-weight: 300;
+    }
+
+    .list li {
+        margin-bottom: 20px;
+    }
+
+    .frame1,
+    .frame2,
+    .frame3 {
+        display: none;
+    }
+
+    .price {
+        position: absolute;
+        top: 400%;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .button_price {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
+
+        font-family: Roboto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+
+        top: 460%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+
+        max-width: 249px;
+        width: 100%;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        margin-left: 40px;
+    }
+    /*  При наведении и нажатии*/
+    .button_price:hover {
+        background-color: #FFF06D;
+    }
+
+    .button_price:active {
+        background-color: #FFF06D;
+    }
+
+    .flower {
+        display: none;
+    }
+
+    .lyambda img{
+        user-select: none;
+        position: absolute;
+        top: 490%;
+        right: 50%;
+        height: 50px;
+        max-width: 200px;
+        width: 100%;
+        transform: translate(50%, 50%);
     }
 }

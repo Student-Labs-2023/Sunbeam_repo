@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 
-@media(max-width: 1920px) {
+
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
 
     .about_studio {
         padding-left: 25px;
@@ -51,35 +53,34 @@
         user-select: none;
     }
 
-    .radi {
+    .mark {
         pointer-events: none;
         position: absolute;
-        padding-left: 35%;
-        margin-top: 63%;
+        margin-top: 10px;
         user-select: none;
     }
 
-    .mark {
-         pointer-events: none;
-         position: absolute;
-         margin-top: 50.3%;
-         user-select: none;
-     }
+    .radi {
+        pointer-events: none;
+        position: absolute;
+        padding-left: 75%;
+        margin-top: -90px;
+        user-select: none;
+    }
 
     .heart1 {
         pointer-events: none;
         position: absolute;
-        padding-left: 30%;
-        margin-top: 66%;
+        padding-left: 65%;
+        margin-top: -55px;
         user-select: none;
-
     }
 
     .heart2 {
         pointer-events: none;
         position: absolute;
-        padding-left: 50%;
-        margin-top: 60%;
+        padding-left: 105%;
+        margin-top: -150px;
         user-select: none;
     }
 
@@ -93,8 +94,7 @@
     }
 }
 
-
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
 
     .about_studio {
         padding-left: 25px;
@@ -145,43 +145,34 @@
         user-select: none;
     }
 
-    .radi {
-        max-width: 262px;
-        width: 100%;
+    .mark {
         pointer-events: none;
         position: absolute;
-        padding-left: 35%;
-        margin-top: 66.5%;
+        margin-top: 8px;
         user-select: none;
     }
 
-    .mark {
-        max-width: 120px;
-        width: 100%;
+    .radi {
         pointer-events: none;
         position: absolute;
-        margin-top: 52%;
+        padding-left: 55%;
+        margin-top: -90px;
         user-select: none;
     }
 
     .heart1 {
-        max-width: 48.53px;
-        width: 100%;
         pointer-events: none;
         position: absolute;
-        padding-left: 30%;
-        margin-top: 70%;
+        padding-left: 45%;
+        margin-top: -55px;
         user-select: none;
     }
 
     .heart2 {
-        max-width: 69.4px;
-        width: 100%;
-        height: 82.15px;
         pointer-events: none;
         position: absolute;
-        padding-left: 53%;
-        margin-top: 62%;
+        padding-left: 90%;
+        margin-top: -150px;
         user-select: none;
     }
 
@@ -192,5 +183,119 @@
         position: absolute;
         right: 0;
         margin-top: 65%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .about_studio {
+        padding-left: 25px;
+        font-family: 'Fira Sans Extra Condensed', sans-serif;
+        font-size: 48px;
+        font-weight: 300;
+    }
+
+    .about_studio_mobile {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        position: absolute;
+        display: inline-block;
+        top: 87%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        max-width: 288px;
+        width: 100%;
+        height: 471px;
+        border-radius: 30px;
+        border: 1px solid #0000001A;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .caption {
+        position: absolute;
+        margin-top: 7%;
+        text-align: center;
+        font-family: 'Fira Sans Extra Condensed', sans-serif;
+        font-size: 28px;
+        font-weight: 275;
+    }
+
+    .our_goal {
+        position: relative;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 10px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .u_nas {
+        position: relative;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 10px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .v_nashey {
+        position: relative;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 10px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .risunok {
+        display: none;
+    }
+
+    .radi {
+        max-width: 220px;
+        width: 100%;
+        pointer-events: none;
+        position: absolute;
+        top: 123%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+
+    .mark {
+        max-width: 89px;
+        width: 100%;
+        pointer-events: none;
+        position: absolute;
+        margin-top: 10px;
+        user-select: none;
+    }
+
+    .heart1 {
+        max-width: 35px;
+        width: 100%;
+        pointer-events: none;
+        position: absolute;
+        margin-top: 35%;
+        right: 85%;
+        user-select: none;
+    }
+
+    .heart2 {
+        max-width: 31px;
+        width: 100%;
+        height: 37px;
+        pointer-events: none;
+        position: absolute;
+        margin-top: 15%;
+        right: 5%;
+        user-select: none;
+    }
+
+    .zavitushka {
+        display: none;
     }
 }

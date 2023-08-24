@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.alwaysVisible {
+    display: block;
+}
 
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
 
     .logo {
         width: 176px;
         height: 31px;
-        margin-left: 20px;
+        margin-left: 30px;
         cursor: pointer;
     }
 
@@ -17,7 +20,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         flex: 0 0 auto;
     }
 
@@ -29,14 +31,14 @@
     }
 
     .layer {
-        margin-left: 150px;
+        margin-right: 200px;
     }
 
     .layer li {
-        align-items: flex-start;
-        display: inline; /* Чтобы элементы списка шли один за другим */
-        margin: 0 25px 0 10px; /* Добавляем небольшие отступы между элементами списка */
-        text-decoration: none; /* Убираем подчеркивание */
+        align-items: center;
+        display: inline;
+        margin: 0 20px 0 20px;
+        text-decoration: none;
     }
 
     .layer2 {
@@ -44,13 +46,13 @@
         display: flex;
         flex-direction: row;
         text-decoration: none;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .layer2 li {
         display: flex;
         align-items: center;
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     .layer2 li:nth-child(2),.layer2 li:nth-child(3) {
@@ -58,73 +60,53 @@
     }
 
     /* чтобы выводились картинки под linkami */
-    .layer li:nth-child(1):hover::after {
+    .layer li {
+        position: relative; /* Добавим позиционирование для родительского элемента */
+    }
+
+    .layer li:hover::after {
         content: "";
         display: block;
-        width: 129px;
-        height: 32px;
-        background-image: url('/public/png/odindlyaclicka.png');
-        background-size: cover;
         position: absolute;
-        bottom: 89.5%;
-        left: 35.5%;
+        bottom: -15px; /* Сдвигаем изображение немного вверх, чтобы оно было под элементом */
+        left: 50%;
         transform: translateX(-50%);
     }
 
+    .layer li:nth-child(1):hover::after {
+        width: 129px;
+        height: 25px;
+        background-image: url('/public/png/odindlyaclicka.png');
+        background-size: cover;
+    }
+
     .layer li:nth-child(2):hover::after {
-        content: "";
-        display: block;
         width: 107px;
         height: 16px;
         background-image: url('/public/png/dvadlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90.5%;
-        left: 43%;
-        transform: translateX(-50%);
     }
 
     .layer li:nth-child(3):hover::after {
-        content: "";
-        display: block;
         width: 126px;
         height: 14px;
         background-image: url('/public/png/tridlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90.5%;
-        left: 50.5%;
-        transform: translateX(-50%);
     }
 
     .layer li:nth-child(4):hover::after {
-        content: "";
-        display: block;
         width: 107px;
         height: 16px;
         background-image: url('/public/png/chetiredlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90.5%;
-        left: 58%;
-        transform: translateX(-50%);
     }
 
-    .layer li:nth-child(5):hover::after {
-        content: "";
-        display: block;
-        width: 62px;
-        height: 11px;
-        background-image: url('/public/png/pyatdlyaclicka.png');
-        background-size: cover;
-        position: absolute;
-        bottom: 90.5%;
-        left: 64%;
-        transform: translateX(-50%);
+    .closeButton {
+        display: none;
     }
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
 
     .logo {
         width: 176px;
@@ -134,6 +116,7 @@
     }
 
     .header {
+        margin-top: 2%;
         width: 100%;
         height: 124px;
         background: white;
@@ -150,9 +133,6 @@
         font-weight: 400;
     }
 
-    .layer {
-        margin-left: 200px;
-    }
 
     .layer li {
         align-items: flex-start;
@@ -166,7 +146,7 @@
         display: flex;
         flex-direction: row;
         text-decoration: none;
-        margin-right: 0px;
+        margin-right: 15px;
     }
 
     .layer2 li {
@@ -179,69 +159,238 @@
         cursor: pointer;
     }
 
-    /* чтобы выводились картинки под linkami */
-    .layer li:nth-child(1):hover::after {
+    .layer li {
+        position: relative; /* Добавим позиционирование для родительского элемента */
+    }
+
+    .layer li:hover::after {
         content: "";
         display: block;
-        width: 129px;
-        height: 32px;
-        background-image: url('/public/png/odindlyaclicka.png');
-        background-size: cover;
         position: absolute;
-        bottom: 89%;
-        left: 37%;
+        bottom: -15px; /* Сдвигаем изображение немного вверх, чтобы оно было под элементом */
+        left: 50%;
         transform: translateX(-50%);
     }
 
+    .layer li:nth-child(1):hover::after {
+        width: 129px;
+        height: 25px;
+        background-image: url('/public/png/odindlyaclicka.png');
+        background-size: cover;
+    }
+
     .layer li:nth-child(2):hover::after {
-        content: "";
-        display: block;
         width: 107px;
         height: 16px;
         background-image: url('/public/png/dvadlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90%;
-        left: 46%;
-        transform: translateX(-50%);
     }
 
     .layer li:nth-child(3):hover::after {
-        content: "";
-        display: block;
         width: 126px;
         height: 14px;
         background-image: url('/public/png/tridlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90%;
-        left: 54.5%;
-        transform: translateX(-50%);
     }
 
     .layer li:nth-child(4):hover::after {
-        content: "";
-        display: block;
         width: 107px;
         height: 16px;
         background-image: url('/public/png/chetiredlyaclicka.png');
         background-size: cover;
-        position: absolute;
-        bottom: 90%;
-        left: 64%;
-        transform: translateX(-50%);
     }
 
-    .layer li:nth-child(5):hover::after {
+    .closeButton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .logo {
+        width: 176px;
+        height: 31px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .header {
+        width: 100%;
+        height: 124px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 0 0 auto;
+    }
+
+    .header a {
+        color: black;
+        text-decoration: none; /* Убираем подчеркивание */
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 0;
+        width: 140px;
+        height: 321px;
+        border-radius: 30px 0 0 30px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 10px;
+        transition: right 1s ease-out;
+
+        font-family: Roboto;
+        z-index: 9;
+    }
+
+    .layer.open {
+        right: 0;
+    }
+
+    .layer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layer li {
+        margin-bottom: 30px; /* Расстояние между элементами */
+        display: inline;
+    }
+
+    .menuContent {
+        margin-top: 120px; /* Расстояние между кнопкой закрытия и списком элементов */
+        margin-left: 20px;
+    }
+
+    .layer2 {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 41px;
+        height: 41px;
+        border-radius: 20px;
+        border: 1px solid black;
+        margin-right: 10px;
+    }
+
+    .burgerIcon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 20px;
+    }
+
+    .burgerBar {
+        width: 100%;
+        height: 1px;
+        background-color: black;
+    }
+
+    .closeButton.showCloseButton {
+        display: block; /* Показать кнопку только при определенном разрешении и при открытом меню */
+    }
+
+    .closeButton {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .closeCircle {
+        width: 41px;
+        height: 41px;
+        margin-right: 4px;
+        border-radius: 20px;
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .closeIcon {
+        width: 16px;
+        height: 2px;
+        background-color: black;
+        transform: rotate(45deg);
+        position: absolute;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .closeIcon:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 8;
+        display: block;
+        transition: opacity 0.5s ease;
+        pointer-events: auto;
+    }
+
+    .layer li {
+        position: relative; /* Добавим позиционирование для родительского элемента */
+    }
+
+    .layer li:hover::after {
         content: "";
         display: block;
-        width: 62px;
-        height: 11px;
-        background-image: url('/public/png/pyatdlyaclicka.png');
-        background-size: cover;
         position: absolute;
-        bottom: 90%;
-        left: 70%;
-        transform: translateX(-50%);
+        top: 17px; /* Сдвигаем изображение немного вверх, чтобы оно было под элементом */
     }
+
+    .layer li:nth-child(1):hover::after {
+        width: 129px;
+        height: 32px;
+        background-image: url('/public/png/odindlyaclicka.png');
+        background-size: cover;
+    }
+
+    .layer li:nth-child(2):hover::after {
+        width: 107px;
+        height: 16px;
+        background-image: url('/public/png/dvadlyaclicka.png');
+        background-size: cover;
+    }
+
+    .layer li:nth-child(3):hover::after {
+        width: 126px;
+        height: 14px;
+        background-image: url('/public/png/tridlyaclicka.png');
+        background-size: cover;
+    }
+
+    .layer li:nth-child(4):hover::after {
+        width: 107px;
+        height: 16px;
+        background-image: url('/public/png/chetiredlyaclicka.png');
+        background-size: cover;
+    }
+
 }
