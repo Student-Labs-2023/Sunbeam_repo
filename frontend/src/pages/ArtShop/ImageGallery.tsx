@@ -8,7 +8,7 @@ function ImageGallery() {
 
     const [loading, setLoading] = useState(true);
     const [images, setImages] = useState<IImage[]>([]);
-    const [modalStates, setModalStates] = useState<boolean[]>([]);
+    const [modalStates, setModalStates] = useState<{ [key: string]: boolean }>({});
 
     useEffect(() => {
         setLoading(true);
@@ -16,7 +16,10 @@ function ImageGallery() {
             .then((response: IImage[]) => {
                 setLoading(false);
                 setImages(response);
-                setModalStates(response.map(() => false));
+                setModalStates(response.reduce((acc, image) => {
+                    acc[image.id] = false;
+                    return acc;
+                }, {} as { [key: string]: boolean }));  /* чтобы нормально отображалось на телефонах */
             })
             .catch(error => {
                 setLoading(false);
@@ -29,25 +32,22 @@ function ImageGallery() {
         );
 
     const imagesInRows = chunkedImages(images, 3);
-
     const imagesInColumn = chunkedImages(images, 1);
 
     const [selectedImages, setSelectedImages] = useState<Array<IImage | null>>(Array(imagesInRows.length).fill(null));
 
-    const openModal = (rowIndex: number, imageIndex: number) => {
-        const updatedSelectedImages = [...selectedImages];
-        updatedSelectedImages[rowIndex] = imagesInRows[rowIndex][imageIndex];
-        setSelectedImages(updatedSelectedImages);
-
-        const updatedStates = [...modalStates];
-        updatedStates[rowIndex * 3 + imageIndex] = true;
-        setModalStates(updatedStates);
+    const openModal = (imageId: string) => {
+        setModalStates(prevStates => ({
+            ...prevStates,
+            [imageId]: true
+        }));
     };
 
-    const closeModal = (rowIndex: number, imageIndex: number) => {
-        const updatedStates = [...modalStates];
-        updatedStates[rowIndex * 3 + imageIndex] = false;
-        setModalStates(updatedStates);
+    const closeModal = (imageId: string) => {
+        setModalStates(prevStates => ({
+            ...prevStates,
+            [imageId]: false
+        }));
     };
 
     return (
@@ -83,12 +83,12 @@ function ImageGallery() {
                                         <div className={styles.textWrapper}>
                                             <div className={styles.author}>{image.author.full_name}, {image.author.age} лет</div>
                                         </div>
-                                        <div className={styles.button} onClick={() => openModal(rowIndex, imageIndex)}>
+                                        <div className={styles.button} onClick={() => openModal(image.id.toString())}>
                                             Подробнее
                                         </div>
                                         <ModalImage
-                                            isOpen={modalStates[rowIndex * 3 + imageIndex]}
-                                            onRequestClose={() => closeModal(rowIndex, imageIndex)}
+                                            isOpen={modalStates[image.id.toString()]}
+                                            onRequestClose={() => closeModal(image.id.toString())}
                                             image={image}
                                         />
                                     </div>
@@ -129,12 +129,12 @@ function ImageGallery() {
                                         <div className={styles.textWrapper}>
                                             <div className={styles.author}>{image.author.full_name}, {image.author.age} лет</div>
                                         </div>
-                                        <div className={styles.button} onClick={() => openModal(rowIndex, imageIndex)}>
+                                        <div className={styles.button} onClick={() => openModal(image.id.toString())}>
                                             Подробнее
                                         </div>
                                         <ModalImage
-                                            isOpen={modalStates[rowIndex * 3 + imageIndex]}
-                                            onRequestClose={() => closeModal(rowIndex, imageIndex)}
+                                            isOpen={modalStates[image.id.toString()]}
+                                            onRequestClose={() => closeModal(image.id.toString())}
                                             image={image}
                                         />
                                     </div>

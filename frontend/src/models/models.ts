@@ -42,7 +42,7 @@ export interface INew {
     header: string;
     content: string;
     new_published_at: string;
-    images: {
+    images: [{
         width: number;
         height: number;
         url: string;
@@ -52,7 +52,7 @@ export interface INew {
             medium?: IImageFormat;
             large?: IImageFormat;
         };
-    };
+    }];
 }
 
 export interface IForm {
