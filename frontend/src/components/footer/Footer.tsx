@@ -21,6 +21,7 @@ function Footer({ isAbsolute }: { isAbsolute: boolean }) {
 
     return (
         <footer className={footerClassName}>
+            <img src="/png/footer.png" alt="footer" className={styles.footerImg} />
             <div className={styles.firstryad}>
                 <ul className={styles.contactList}>
                     <li className={styles.phone}>{CONTACT_PHONE}</li>
@@ -30,7 +31,6 @@ function Footer({ isAbsolute }: { isAbsolute: boolean }) {
                         <li><img src="/png/vk.png" alt="vk" onClick={() => navigateTo(VK_LINK)}/></li>
                     </div>
                 </ul>
-                <img src="/png/footer.png" alt="footer" className={styles.footerImg} />
             </div>
             <div className={styles.secondryad}>
                 <ul>
