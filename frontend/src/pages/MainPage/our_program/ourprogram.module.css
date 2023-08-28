@@ -305,7 +305,13 @@
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 300px) and (max-width: 375px) {
+
+    .ourprogram {
+        position: absolute;
+        top: 275%;
+        left: 35%;
+    }
 
     /* Рисунки */
     .ourProgramImage {
@@ -323,16 +329,13 @@
         width: 100%;
         height: 50px;
         position: absolute;
-        top: 310%;
-        left: 30%;
+        top: 650px;
         transform: translate(-20%, -20%);
     }
 
     /* По программе */
 
     .caption {
-        position: absolute;
-        top: 241%;
         transform: translate(-20%, -20%);
         text-align: center;
         left: 40%;
@@ -352,8 +355,173 @@
         justify-content: center;
         position: absolute;
         overflow: hidden;
-        top: 274%;
-        left: 50%;
+        top: 310px;
+        left: 32%;
+        transform: translate(-50%, -50%);
+    }
+
+    .circle_frame {
+        width: 260px;
+        height: 397px;
+        border-radius: 30px;
+        border: 2px solid #0000001A;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .risunok {
+        margin-left: 3%;
+        margin-top: 1%;
+        width: 100%;
+        max-width: 248px;
+        height: 200px;
+    }
+
+    .text_caption {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .text_creation {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .modal_nav_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .modal_nav_button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 20px;
+    }
+
+    .dot_indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin: 0 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .active_dot {
+        background-color: #FFCC17;
+    }
+
+    .schedule {
+        user-select: none;
+        position: absolute;
+        cursor: pointer;
+
+        font-family: Roboto;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+
+        margin-top: 17%;
+        margin-left: 20%;
+        cursor: pointer;
+
+        width: 149px;
+        height: 51px;
+        border-radius: 50px;
+        border: 1px solid #000000;
+    }
+    /* При наведении и нажатии*/
+    .schedule:hover {
+        background-color: #FFF06D;
+    }
+    .schedule:active {
+        background-color: #FFF06D;
+    }
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 450px) {
+
+    .ourprogram {
+        position: absolute;
+        top: 245%;
+        left: 37%;
+    }
+
+    /* Рисунки */
+    .ourProgramImage {
+        position: absolute;
+        margin-top: 150%;
+        padding-left: 35%;
+    }
+
+    .zavitushka2 {
+        display: none;
+    }
+
+    .zavitushka4 {
+        max-width: 200px;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 600px;
+        transform: translate(-20%, -20%);
+    }
+
+    /* По программе */
+
+    .caption {
+        transform: translate(-20%, -20%);
+        text-align: center;
+        left: 40%;
+        font-size: 26px;
+        font-family: "Fira Sans Extra Condensed";
+        font-weight: 300;
+    }
+
+    .circle_frames {
+        display: none;
+    }
+
+    .circle_frames_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        overflow: hidden;
+        top: 310px;
+        left: 30%;
         transform: translate(-50%, -50%);
     }
 

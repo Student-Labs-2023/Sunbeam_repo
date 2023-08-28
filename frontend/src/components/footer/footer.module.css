@@ -203,8 +203,69 @@
     }
 }
 
+@media screen and (min-width: 300px) and (max-width: 375px) {
+    .footer_pc {
+        display: none;
+    }
 
-@media screen and (min-width: 300px) and (max-width: 450px) {
+    .footer_absolute {
+        background-color: #FFF06D;
+        position: absolute;
+        top: 3550px;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .footer_relative {
+        background-color: #FFF06D;
+        flex: 1;
+        padding: 20px;
+    }
+
+    .footerImg {
+        display: none;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .firstryad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contactList {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links {
+        display: flex;
+        align-items: flex-end;
+        gap: 100px;
+    }
+
+    .secondryad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .secondryad ul {
+        display: none;
+    }
+
+    .payments {
+        max-width: 280px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 450px) {
     .footer_pc {
         display: none;
     }

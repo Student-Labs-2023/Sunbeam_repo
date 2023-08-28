@@ -10,3 +10,9 @@
   width: 300px;
   height: 350px;
 }
+
+@media screen and (max-width: 450px) {
+  .work {
+    font-size: 14px;
+  }
+}

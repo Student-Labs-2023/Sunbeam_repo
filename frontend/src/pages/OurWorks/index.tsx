@@ -13,8 +13,6 @@ function OurWorks() {
   if (orders) {
     const works = orders.map((order: any) => order.picture)
 
-    console.log(orders)
-
     return (
       <div>
         <h1 style={{

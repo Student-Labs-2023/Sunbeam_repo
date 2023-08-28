@@ -12,9 +12,13 @@ interface Params {
 }
 
 function numeralOfAge(age: number) {
-  if (age % 10 == 1) return 'год'
-  if ([2, 3, 4].includes(age % 10)) return 'года'
-  return 'лет'
+    if (age % 10 === 1 && age % 100 !== 11) {
+        return 'год';
+    } else if ([2, 3, 4].includes(age % 10) && ![12, 13, 14].includes(age % 100)) {
+        return 'года';
+    } else {
+        return 'лет';
+    }
 }
 
 function Work({ title, author, image }: Params) {

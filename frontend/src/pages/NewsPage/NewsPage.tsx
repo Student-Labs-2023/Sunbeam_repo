@@ -57,8 +57,6 @@ function NewsPage() {
         setModalStates(updatedStates);
     };
 
-    console.log(groupedNews)
-
     return (
         <div className={styles.news}>
             <div className={styles.centerText}>Новости</div>

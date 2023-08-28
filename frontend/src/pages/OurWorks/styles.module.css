@@ -3,3 +3,9 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 48px 20px;
 }
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 26px;
+  }
+}

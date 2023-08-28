@@ -9,6 +9,8 @@ function SchedulePage() {
     const [modalStates, setModalStates] = useState<boolean[]>([]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         setLoading(true);
         getSchedule()
             .then((response: ISchedule[]) => {
@@ -43,6 +45,15 @@ function SchedulePage() {
         groupedSchedule[day]?.sort((a, b) => a.time.localeCompare(b.time));
     });
 
+    function numeralOfPeople(age: number) {
+        if (age % 2 != 1 && age == 3) {
+            return 'человека';
+        } else {
+            return 'человек';
+        }
+    }
+
+
     return (
         <div className={styles.schedule}>
             <div className={styles.centerText}>Расписание</div>
@@ -60,7 +71,7 @@ function SchedulePage() {
                                         {groupedSchedule[day]?.map((schedule: ISchedule, index) => (
                                             <div key={schedule.id} className={styles.scheduleWrapper}>
                                                 <div className={styles.header}> {schedule.header} </div>
-                                                <div className={styles.childrens}> {schedule.number_of_children} человека<br/> в группе <br/> </div>
+                                                <div className={styles.childrens}> {schedule.number_of_children} {numeralOfPeople(schedule.number_of_children)} <br/> в группе <br/> </div>
                                                 <img src="/png/line.png" className={styles.line} alt="line"/>
                                                 <div className={styles.time}>{schedule.time}</div>
                                             </div>

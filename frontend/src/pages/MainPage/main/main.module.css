@@ -383,7 +383,7 @@
         justify-content: center;
         font-weight: 300;
 
-        margin-top: 43%;
+        margin-top: 37%;
         left: 52%;
         transform: translate(-50%, -50%);
 
@@ -404,7 +404,7 @@
     .lyambda img{
         user-select: none;
         position: absolute;
-        top: 45%;
+        top: 46%;
         right: 50%;
         height: 50px;
         max-width: 200px;

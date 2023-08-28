@@ -16,7 +16,9 @@ function PaymentStatusIndicator({ status }: { status: Status }) {
     if (status == 'expired')
         return <>Чек больше не актуален</>
 
-    return <>Проверка оплаты...</>
+    return <div className={styles.pay}>
+        Проверка оплаты...
+        </div>
 }
 
 function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
@@ -201,6 +203,16 @@ function ModalOrder({ isOpen, onRequestClose, image }: ModalProps) {
                     {image?.author.full_name}, "{image?.title}"
                 </span>
                 <span style={{ margin: '0 70px' }}>
+                    1000 ₽
+                </span>
+                <img src="/png/line_order.png" alt="line_order" className={styles.line_order} />
+            </div>
+            <div className={styles.order_details_mobile}>
+                <img src="/png/line_order.png" alt="line_order" className={styles.line_order} style={{ margin: '10px' }} />
+                <span>
+                    {image?.author.full_name}, "{image?.title}"
+                </span>
+                <span style={{ margin: '0 30px' }}>
                     1000 ₽
                 </span>
                 <img src="/png/line_order.png" alt="line_order" className={styles.line_order} />
